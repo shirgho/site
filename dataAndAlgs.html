@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="style.css">
+
+<html>
+  <body>
+    <title> Data structures and Algorithms </title>
+    
+    <h3>
+     
+      <a href="index.html">Home</a>&nbsp
+      <a href="writing.html">Writing</a>&nbsp
+      <a href="games.html">Games</a>&nbsp
+      <a href="music.html">Music</a>&nbsp
+      <a href="dev.html">Dev</a>&nbsp
+    
+    </h3> 
+
+    <h1> Data structures and Algorithms </h1>
+
+    <section id="start">
+      <p>Data structures and Algorithms - Theory and Practice</p>
+    </section>
+
+    <article id="linked_lists"> 
+      <h4>Linked Lists, or Lists</h4>
+      Can implement in an array, which has expensive insert and delete operations, or through pointers and structs, which need double the space.
+      <h5>Implementation In C - Array</h5>
+         required max size, wastes considerable space <br>
+         constant write operation if in space  <br>
+        <a href="">Implementation</a>
+      </article>
+
+      <article id="ImplementationInCPointers">
+        <h5>Implementation In C - Pointers</h5>
+         cheaper to dynamically move, add, delete items, as link to next item changed simply. <br>
+         space needed for extra pointer field for each item <br>
+
+        <a href="">Implementation</a>
+      </article>
+
+    </article>
+    
+    <article id="Stacks and Queues">
+      <h4>Stacks and Queues</h4>
+      <h5>Stacks</h5>
+        Data Structure that can be built using a linked list, but limited in operations. <br>
+        Data is added and removed from the top of the list only. So only a head pointer needed. <br>
+        Used by OS, compilers etc. <br>
+        <a href="">Implementation</a> 
+
+      <h5>Queues</h5>
+        Data Structure using a list, with items added from one end, and removed from the other. <br>
+        So two pointers to the list needed, head and tail.<br>
+        Used by OS schedulers etc.<br>
+        <a href="">Implementation</a> 
+    </article>
+
+
+    <article id="Recursion">
+      <h4>Recursion</h4>
+      <h5>Factorial Example</h5>
+        Why is 0! = 1? <br>
+        Well, because it is defined so, firstly. <br>
+        Secondly, a factorial can be thought of as the number of permutations (unique orderings of elements) for a set with n elements <br>
+        And basically, because there is still one way to represent a set/sequence/permutation of 0!, that is an empty set. That is, can be represented in one way. So the answer is still one. <br>
+        This definition also works for the combinations formula (combination is a grouping of elements of a set without regard to order.)
+        <a href="https://www.thoughtco.com/why-does-zero-factorial-equal-one-3126598">Reference</a> <br>
+
+        Definition: <br>
+        <code>
+          n! => <br>
+            n! * (n-1)! for n > 1 <br>
+            1 for n == 0 <br>
+        </code>
+        
+        <h5>Towers of Hanaoi</h5>
+        <a href="https://sleeplessafternoon.wordpress.com/2013/03/26/examples-of-recursion-the-good-the-bad-and-the-silly/">Reference</a> <br>
+    </article>
+  </body>
+</html>
