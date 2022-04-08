@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+      
+      </h3> 
+  
+    </header>
+    
+    <h4 id="linked-lists-or-lists">Linked Lists, or Lists</h4>
+    <p>Can implement in an array, which has expensive insert and delete operations, or through pointers and structs, which need double the space.</p>
+    <h5 id="implementation-in-c---array">Implementation In C - Array</h5>
+    <ul>
+    <li>required max size, wastes considerable space</li>
+    <li>constant write operation if in space</li>
+    <li><a href="https://github.com/shirgho/dsAa/tree/master/lists" title="Github Link">Implementation</a>.</li>
+    </ul>
+    <h5 id="implementation-in-c---pointers">Implementation In C - Pointers</h5>
+    <p>cheaper to dynamically move, add, delete items, as link to next item changed simply.</p>
+    <p>space needed for extra pointer field for each item</p>
+    <p><a href="https://github.com/shirgho/dsAa/tree/master/lists" title="Github Link">Implementation</a>.</p>
+    </article>
+    <h1 id="linked-lists">Linked Lists</h1>
+    <ul>
+    <li>Elements of a linked lists are connected by pointers.</li>
+    <li>These can be allocated at any time, so data can be appended any time easily, not just at initialisation. (arrays have to be expanded for new data outside init range)</li>
+    <li>But elements are probably not allocated next to each other, so random access not possible, cannot be accessed by index. (So access is slower than arrays)</li>
+    <li>Linked List is normally made up of node(struct or object containing data member and self referencing (to type) pointer ), iterator and list itself.</li>
+    <li></li>
+    </ul>
+    <h2 id="types">Types</h2>
+    <h3 id="singly-linked-lists">Singly Linked lists</h3>
+    <ul>
+    <li>iterator, node and linked list</li>
+    <li>node is not directly used, part of linked list
+    <ul>
+    <li>when initialising or adding an object to list</li>
+    <li>we create a node, and get a pointer to this node. (Can also directly use the node but pointers are natural for most linked list things)</li>
+    <li>data added to node, and next pointer updated to fit into list</li>
+    </ul></li>
+    <li>Iterator is a node, which uses its next field to traverse list</li>
+    <li>List has root and lastNode pointer. (which are actually nodes that are part of list)
+    <ul>
+    <li>if both NULL, means list is empty</li>
+    <li>if one item, it will be both root and lastNode</li>
+    </ul></li>
+    <li>Can also use just a node instead of custom iterator, but have to make member fields of linkedlist and linknode public then.</li>
+    </ul>
+    <pre><code>   cout &lt;&lt; &quot;Contents of Linked List without custom iterator: &quot;;
+        //have to make member fields of classes public for this:
+        
+        LinkNode&lt;int&gt; *it = lList.m_root;
+    
+        while (it != NULL){
+            cout &lt;&lt; &quot; &quot; &lt;&lt; it-&gt;m_data;
+            it = it-&gt;m_next;
+        }
+    
+        cout &lt;&lt; &quot;.&quot; &lt;&lt; endl;
+    </code></pre>
+    <h3 id="double-ended-linked-lists">Double Ended Linked Lists</h3>
+    <ul>
+    <li>Allows inserting and removing from both ends of lists</li>
+    </ul>
+    <h3 id="doubly-linked-lists">Doubly Linked Lists</h3>
+    <ul>
+    <li>Allows traversal from root forward as well as from lastNode backwards.</li>
+    <li>custom iterator to add suport for backwards traversal.</li>
+    </ul>
+    <h3 id="cicular-lists">Cicular Lists</h3>
+    <ul>
+    <li>last node's next is root node, root node's prev is last node (if double linked list)</li>
+    </ul>
+    <h3 id="stl-list-container">STL list container <list></h3>
+    <ul>
+    <li>Doubly linked, double ended list</li>
+    <li>Is also actually a circular list. (Iterator implementation starts from the last node and has an internal link to the root node. Bit weird but ok must be good or something)</li>
+    <li>sort function runs in O(N * log(N))</li>
+    <li>preferable to call empty() to test if a container is empty instead of testing the return value of size(). (True for all STL containers)</li>
+    </ul>
+    <h3 id="lists-vs-arrays">Lists vs Arrays</h3>
+    <table style="width:24%;">
+    <colgroup>
+    <col width="11%" />
+    <col width="12%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th>Lists</th>
+    <th>Arrays</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>Fast insertion, deletion at ends of list</td>
+    <td>Array must be shifted or reallocated</td>
+    </tr>
+    <tr class="even">
+    <td>Can expand and shrink in almost constant time</td>
+    <td>More expensive to expand, shrink</td>
+    </tr>
+    <tr class="odd">
+    <td>Slow to search for particular value</td>
+    <td>Faster search algos</td>
+    </tr>
+    <tr class="even">
+    <td>Do not have random access</td>
+    <td>Random access for any index</td>
+    </tr>
+    <tr class="odd">
+    <td>Data + Pointer in node, extra memory</td>
+    <td>Just Data, less memory</td>
+    </tr>
+    <tr class="even">
+    <td>However, overall memory allocated is according to n actual elements (so easier and maybe more efficient on adding extra items at runtime)</td>
+    <td>arrays usually allocated in blocks with unneeded memory buffer</td>
+    </tr>
+    </tbody>
+    </table>
+    <h2 id="stacks-queues-double-ended-queues-and-priority-queues">Stacks, Queues, Double-ended Queues and Priority Queues</h2>
+    <ul>
+    <li>Adapters built on top of arrays, lists, other data structures</li>
+    <li>created for specific task and then usually discarded</li>
+    </ul>
+    <article id="Stacks and Queues">
+    <h4 id="stacks-and-queues">Stacks and Queues</h4>
+    <h5 id="stacks">Stacks</h5>
+    <p>Data Structure that can be built using a linked list, but limited in operations.</p>
+    <p>Data is added and removed from the top of the list only. So only a head pointer needed.</p>
+    <p>Used by OS, compilers etc.</p>
+    <ul>
+    <li>e.g. Program stack</li>
+    <li>O(1)</li>
+    <li>LIFO</li>
+    <li>only one item inserted or removed at a time</li>
+    <li>no random access, to acess middle elements, top ones must be popped</li>
+    <li></li>
+    </ul>
+    <p><a href="https://github.com/shirgho/dsAa/tree/master/lists" title="Github Link">Implementation</a>.</p>
+    <h5 id="queues">Queues</h5>
+    <p>Data Structure using a list, with items added from one end, and removed from the other.</p>
+    <p>So two pointers to the list needed, head and tail.</p>
+    <p>Used by OS schedulers etc.</p>
+    <h3 id="queue-dequeue">Queue, Dequeue</h3>
+    <ul>
+    <li>e.g. message queues</li>
+    <li>O(1)</li>
+    <li>FIFO</li>
+    <li>Link List better underlying structure for Stacks, Queues, because we need fast expansion, insertion and removal at ends. Don't need random access or searching or insertion in middle somewhere.</li>
+    </ul>
+    <h3 id="priority-quees">Priority Quees</h3>
+    <ul>
+    <li>Insertion depends on O(n), other operations O(1).</li>
+    <li>Implmented as Tree in STL so insertion is faster</li>
+    </ul>
+    <p><a href="https://github.com/shirgho/dsAa/tree/master/lists" title="Github Link">Implementation</a>.</p>
+    </article>
+
+  </body>
+</html>

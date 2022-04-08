@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="hash-tables">Hash tables</h1>
+    <p>Also called dictionaries, maps etc.</p>
+    <p>A hashing function/algorithm is used on an object to get it's key, which is an index that fits in the range of the array or whatever is used to implement the hash table. This index is then looked up to store/access the object.</p>
+    <p>'''</p>
+    <p>int HashFunction(string &amp;str) { int hash = 0;</p>
+    <pre><code>for(int i=0; i &lt; (int)str.size(); i++){
+        int val = (int(str[i]));
+        hash = (hash * 256 + val) % m_size;
+    }
+    
+    return hash;</code></pre>
+    <p>}</p>
+    <p>A problem with hashtables is collisions on the hash function i.e. when two different objects are hashed to the same index value. This can be solved with</p>
+    <p>The ratio of the total number of items to the hash table's size is knows as the load factor.</p>
+    <h2 id="open-addressing">Open Addressing</h2>
+    <p>Linear probing, quadratic probing: Inserting the object in the next free spaces. Results in primary and secondary clusters. (groups of same hashed objects)</p>
+    <p>Double Hashing: Using a second hash function to find the actual index after collision. HERE the array size should be a prime number, to avoid hash values looping through indexes with no change.</p>
+    <h2 id="seperate-chaining">Seperate Chaining</h2>
+    <p>When there is collision on an index, a link list is set up on the index to collect nodes there. When searching, the object is searched for on the index and then through the index's linked list.</p>
+    <h2 id="stl-compatible-containers">STL-compatible containers</h2>
+    <p>Assosiate containers. - Type of objects to be stored must be declared. - Hashing function - Comparison function - Optionally allocator</p>
+    <p>boost:</p>
+    <h3 id="hash_set-hash_multiset">hash_set, hash_multiset</h3>
+    <h3 id="hash_map-hash_multimap">hash_map, hash_multimap</h3>
+    <p>std:</p>
+    <h3 id="unordered_set-unordered_multiset">unordered_set, unordered_multiset</h3>
+    <ul>
+    <li>sorted by key in a list like structure.</li>
+    <li>key is the value, element, not like map where it's a pair</li>
+    <li>keys cannot be changed, must be deleted and new inserted</li>
+    <li>Insertions, lookups, removals : O(log N) ### set, multiset</li>
+    </ul>
+    <h3 id="unordered_map-unordered_multimap">unordered_map, unordered_multimap</h3>
+    <ul>
+    <li>insertion, removal, access generally O(1)</li>
+    </ul>
+    <h3 id="map-multimap">map, multimap</h3>
+    <ul>
+    <li>ordered sequence of key-value pairs.</li>
+    <li>implemented as balanced tree structure, so possible to maintain order by specific tree traversal (not sure actually baout c++ but in java)</li>
+    </ul>
+    <h3 id="remove-erase">Remove-Erase</h3>
+    <p>https://en.wikipedia.org/wiki/Erase%E2%80%93remove_idiom</p>
+
+  </body>
+</html>

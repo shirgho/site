@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="arrays">Arrays</h1>
+    <p><a href="https://github.com/shirgho/dsAa/tree/master/arrays/array.h" title="Github Link">Arrays.h</a> contains a custom Unordered Array class, exposing methods to add elements, remove elements, and other operations on elements in the array.</p>
+    <p>Also contains algorithms such as linear search, and now will add sort algorithms to it.</p>
+    <h2 id="linear-search-on">Linear Search O(n)</h2>
+    <ul>
+    <li>Just compare every value to search value.</li>
+    </ul>
+    <h2 id="bubble-sort-on">Bubble Sort O(n²)</h2>
+    <ul>
+    <li>Compare first value with second, shift greater value to right.</li>
+    <li>Compare second to third, shift greater to right until rightmost element(n == number of elements) is maximum.</li>
+    <li>Decrease upper bound by one, and recurse for rest of array. (sorted array of max values starts building up on right side of array).</li>
+    <li>A comparison and swap is done on every step.</li>
+    <li>sorts right to left (but end up min to max)</li>
+    </ul>
+    <h2 id="selection-sort-on">Selection Sort O(n²)</h2>
+    <ul>
+    <li>go through array, keeping record of the min item seen so far</li>
+    <li>swap min item to first position at end of loop</li>
+    <li>increase lower bound by one and recurse, until whole array is traversed and sorted</li>
+    <li>Same number of comparisons as Bubble Sort (O(n²)), but only one swap per round (O(n))</li>
+    <li>sorts left to right (end up min to max)</li>
+    </ul>
+    <h2 id="insertion-sort-on">Insertion Sort O(n²)</h2>
+    <ul>
+    <li>runs well on already partially or inserting an item in fully sorted list, can quit early</li>
+    <li>if list is in reverse order (descending), is worst case, will need maximum comparisons and shifts, same performance as bubble sort.</li>
+    <li>he best-case time is O(n × 1) = O(n) and the worst-case time is O(n × n) = O(n²)</li>
+    <li>take i-1 item as sorted, go next item (which is now current item, i) and compare with prev</li>
+    <li>if prev is bigger, shift it to the right, and compare i with i-2, until 0th item is reached</li>
+    <li>if i was smaller than all, shifted to 0th position</li>
+    <li>if i was bigger at some point, break loop and insert there (shift all items from i coming down to the position)</li>
+    </ul>
+    <h2 id="mergesort-on-log-n">MergeSort O(n (log n))</h2>
+    <ul>
+    <li>recursive function splits list into two halves</li>
+    <li>halves split further until one item remains (in all lists?)</li>
+    <li>then as functions return, the 1 item lists are sorted and merged into bigger lists</li>
+    <li>second last step, we have two lists of half the values, then they are sorted and merged into the complete list.</li>
+    <li>Need a temp array of equal size. Could be problematic if memory problems and list is very large.</li>
+    </ul>
+    <h2 id="shell-sort-on-log-n">Shell Sort O(n (log n)²)</h2>
+    <ul>
+    <li>Faster than the simpler sorts</li>
+    <li>Slower generally than Quicksort, but faster on smaller sets of data</li>
+    <li>Like an Insertions sort with multiple passes</li>
+    <li>The initial passes have bigger gaps in between, data is sorted partially over the passes</li>
+    <li>The final pass is like an insertion sort, with every element checked. The idea is that the earlier passes have prepared the data enough the final insertion sort step is fast.</li>
+    </ul>
+    <h2 id="quick-sort-on-log-n">Quick Sort O(n (log n))</h2>
+    <ul>
+    <li>in place, so no extra memory needed (except one variable for swap)</li>
+    </ul>
+    <pre><code>    QuickSort()
+        {
+            if (start &gt;= end) return (c) 
+            index = partition() (a.n + b) (looping through the list) (T(n))
+            QuickSort(start, index-1) T(n/2)
+            QuickSort(index+1, end) T(n/2)
+        }</code></pre>
+    <ul>
+    <li>T(1) = c</li>
+    <li>T = 2T(n/2) + c.n</li>
+    <li>n( log n) average case</li>
+    <li>n² worst case (if pivot is bad, and there is a full segment and 0 segment created from partitioning)</li>
+    </ul>
+    <h3 id="median-of-three">Median of Three</h3>
+    <h3 id="randomized-partioning">Randomized Partioning</h3>
+    <h3 id="partitioning-on">Partitioning O(n)</h3>
+    <ul>
+    <li>Pivot value is value used as the condition in the partition (e.g. int value of 100)</li>
+    <li>Pivot index marks the position in the container where the first section ends and second begins.</li>
+    <li>start counter from left index, if find a value bigger than pivotvalue, start/resume counter from right index and then if find a value there, swap with left value. continue until indexes cross, which is the pivot index, return.</li>
+    </ul>
+    <h2 id="radix-sort-on-log-n">Radix Sort O(n (log n))</h2>
+    <p>Put elements into buckets/container according to some patter, then take them back from buckets into the original container. After potentially multiple passes of doing so, data would be ordered according to the final putting back of elements from the organising containers. No comparison of value by value goes on.</p>
+    <h2 id="heap-sort-o-n-log-n">Heap Sort O (n log n)</h2>
+    <ul>
+    <li>Heap is weakly ordered tree (can be implemented on top of array, lists, priority queue etc)</li>
+    <li>weakly ordered, parent key is greater than child key</li>
+    <li>so on removing elements from heap, we can expect them to be in ascending or descending order already</li>
+    <li>insertion removal from heap is O(log n)</li>
+    <li>sort is n log(n) because function has to run on each element, so times n (actually 2 x n, but is constant).</li>
+    </ul>
+    <h2 id="intro-sort">Intro Sort</h2>
+    <h1 id="ordered-arrays">Ordered Arrays</h1>
+    <p><a href="https://github.com/shirgho/dsAa/tree/master/arrays/orderedarray.h" title="Github Link">orderedarray.h</a> contains custom Ordered Array class. Is already sorted through a push method, which uses a form of insertion sort (also modified to binary search insertion sort) to keep the array sorted as new elements are added.</p>
+    <p>It has binary search available instead of linear search, which reduces complexity from O(n) to O(log n).</p>
+    <p>And I'm sure probably some other functions etc for the array class.</p>
+    <h2 id="binary-search-olog-n">Binary Search O(log n)</h2>
+    <ul>
+    <li>Start from the middle element of sorted array, and check if value matches if not, choose one side of the array, discarding half members recurs</li>
+    </ul>
+    <h1 id="arrays-and-stl-vectors">Arrays and STL Vectors</h1>
+    <ul>
+    <li>If using custom classes or pointers, use vectors. Use them anyway.</li>
+    </ul>
+    <pre><code>    SomeClass someArray[100]; // calls a 100 constructors for 100 objects.
+    
+        vector&lt;SomeClass&gt; someVec;
+        someVec.reserve(100); // no constructors are executed to store.
+    </code></pre>
+    <ul>
+    <li>Vectors are containers/wrappers over dynamic arrays.</li>
+    <li>Can be accessed with iterators as well as index based operations.</li>
+    <li>Can be passed to functions expecting arrays etc ususally because of this..</li>
+    </ul>
+
+  </body>
+</html>

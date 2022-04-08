@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="c-object-oriented-programming">C++ Object Oriented Programming</h1>
+    <h2 id="classes">Classes</h2>
+    <ul>
+    <li>Classes can be defined with private, protected and public members.</li>
+    <li>Members can be data variables or functions.
+    <ul>
+    <li>Private members accessed only by objects of that class</li>
+    <li>Protected can be accessed by &quot;Friend&quot; objects or Inherited objects.</li>
+    <li>Public is public</li>
+    </ul></li>
+    </ul>
+    <h2 id="templates">Templates</h2>
+    <ul>
+    <li>Generic programming, don't have to decide type at Compile time then</li>
+    <li>Can be used for functions and classes, as well as when declaring containers
+    <ul>
+    <li>vector <int> or vector <string> etc.</li>
+    </ul></li>
+    </ul>
+    <h2 id="functions">functions</h2>
+    <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">
+    <span class="kw">template</span> &lt;<span class="kw">class</span> type&gt; ret-type func-name(parameter list) {
+       <span class="co">// body of function</span>
+    } 
+    
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    T Max (T a, T b) { 
+       <span class="cf">return</span> a &lt; b ? b:a; 
+    }
+    
+    <span class="co">//Function Definition</span>
+    <span class="kw">template</span> &lt;<span class="kw">class</span> myType&gt;
+    myType GetMax (myType a, myType b) {
+     <span class="cf">return</span> (a&gt;b?a:b);
+    }
+    
+    <span class="kw">template</span> &lt;<span class="kw">class</span> T, <span class="kw">class</span> U&gt;
+    T GetMin (T a, U b) {
+      <span class="cf">return</span> (a&lt;b?a:b);
+    }
+    
+    <span class="co">// Function Call</span>
+    <span class="dt">int</span> x,y,i;
+    <span class="dt">long</span> l;
+    
+    i = GetMin&lt;<span class="dt">int</span>,<span class="dt">long</span>&gt; (x,l);
+    GetMax &lt;<span class="dt">int</span>&gt; (x,y);
+    
+    <span class="co">// in these cases, compiler can figure out types    </span>
+    i = GetMin (j,l);
+    GetMax(x,y);
+    
+    <span class="kw">template</span> &lt;<span class="kw">typename</span> T&gt;
+    <span class="kw">inline</span> T <span class="at">const</span>&amp; Max (T <span class="at">const</span>&amp; a, T <span class="at">const</span>&amp; b) { 
+       <span class="cf">return</span> a &lt; b ? b:a; 
+    }</code></pre></div>
+    <h2 id="classes-1">classes</h2>
+    <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">
+    <span class="kw">template</span>&lt;<span class="kw">typename</span> T&gt; <span class="kw">class</span> LinkList;
+    
+    
+    <span class="kw">template</span> &lt;<span class="kw">class</span> T&gt;
+    <span class="kw">class</span> mypair {
+        T a, b;
+      <span class="kw">public</span>:
+        mypair (T first, T second)
+          {a=first; b=second;}
+        T getmax ();
+    };
+    
+    <span class="kw">template</span> &lt;<span class="kw">class</span> T&gt;
+    T mypair&lt;T&gt;::getmax ()
+    {
+      T retval;
+      retval = a&gt;b? a : b;
+      <span class="cf">return</span> retval;
+    }
+    
+    <span class="dt">int</span> main () {
+      mypair &lt;<span class="dt">int</span>&gt; myobject (<span class="dv">100</span>, <span class="dv">75</span>);
+      cout &lt;&lt; myobject.getmax();
+      <span class="cf">return</span> <span class="dv">0</span>;
+    }</code></pre></div>
+    <ul>
+    <li>Confused by so many T's? There are three T's in this declaration: The first one is the template parameter. The second T refers to the type returned by the function. And the third T (the one between angle brackets) is also a requirement: It specifies that this function's template parameter is also the class template parameter.</li>
+    </ul>
+
+  </body>
+</html>

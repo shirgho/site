@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="dynamic-memory">Dynamic memory</h1>
+    <h2 id="new-and-delete">New and Delete</h2>
+    <p>int *foo;</p>
+    <p>Here, you declared a pointer variable, that can point to an int.</p>
+    <p>foo = new int [5];</p>
+    <p>Here, you've initialised the pointer variable to now point to a block of integers.</p>
+    <p>Now when you delete[] foo, you're removing the allocated memory block. Foo still exists. You can assign Foo to NULL for example, making it now a null pointer.</p>
+    <h2 id="passing-pointers-to-functions">Passing Pointers to Functions</h2>
+    <h3 id="half-baked-explanation">half baked explanation</h3>
+    <p>You can also pass pointers or references to functions, sure, you know this. BUT you can also inadvertently pass a pointer by value, and not the reference that the pointer was actually pointing too.</p>
+    <p>In c++, you can pass by reference, which is different from passing a pointer. Even though a pointer's value is a reference to something, pointer itself is still a variable.</p>
+    <p>It's a bit confusing. References are also memory addresses, but you pass them directly without wrapping them in a pointer variable.</p>
+    <p>I explain:</p>
+    <p>´´´ int pointer;</p>
+    <p>void foo(int *pointer){</p>
+    <p>} which would be foo(pointer). This will create a copy of the pointer value. Any changes done will just be for this local variable inside the function.</p>
+    <p>void foo(int &amp;pointer){</p>
+    <p>} which would be foo(&amp;pointer). Now any changes done to pointer or dereferencing and changing the value held by the reference pointed to by the pointer will be changing the same outside pointer variable.</p>
+    <p>´´´ ### Better explanation: https://stackoverflow.com/questions/57483/what-are-the-differences-between-a-pointer-variable-and-a-reference-variable-in</p>
+    <p>int a; int *pointer = &amp;a; int &amp;r = a;</p>
+    <p>a reference as another name for the same variable. It is an alias for the variable. You can &amp;pointer to get the address of the pointer, but the address of the &amp;r is the same as &amp;a.</p>
+    <ul>
+    <li><p>Can have arbitrary level of nested pointers to pointers, offering extra levels of indirection. References only offer one level of indirection.</p></li>
+    <li><p>Still not sure what the point of references are, except for making temp variables to pass into functions, lists, without making pointers for the original variables and dereferencing them.</p></li>
+    </ul>
+    <h2 id="pointers-to-pointers-2-dimensional-arrays">Pointers to Pointers / 2 dimensional arrays</h2>
+    <pre><code>char **m_adjMatrix;
+    m_adjMatrix = new char*[m_maxVerts];
+    m_adjMatrix[index1][index2] = 1;</code></pre>
+    <p>m_adjMatrix is pointer to pointer. Pointer to first dimension, can be thought. Then accessing that, you access second dimension. (the second pointer)</p>
+
+  </body>
+</html>

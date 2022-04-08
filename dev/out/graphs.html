@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="graphs">Graphs</h1>
+    <ul>
+    <li>Relationship of each node is more abstract in a graph than a tree. (Not just parent children)</li>
+    <li>Nodes are called Vertices.</li>
+    <li>Vertices that are connected are adjacent vertices.</li>
+    <li>no keys in graphs</li>
+    <li>edges can go one way ( directed) or both ways (non directed)</li>
+    <li>edges of graph often represented by adjacency matrix or adjacency list. Trees use references to objects or array indexes.</li>
+    <li>vertices can be weighted/unweighted</li>
+    <li>Vertices can have different number of adjacent vertices (unlike binary tree)</li>
+    <li>Connected graph:there is a path from all vertices to all other vertices, directly or indirectly.
+    <ul>
+    <li>path is a sequence of edges that can be taken to get to a destination vertex from a starting vertex.</li>
+    </ul></li>
+    </ul>
+    <h2 id="searching">Searching</h2>
+    <ul>
+    <li>In ordered Tree or Graph, like BST, easy to search for value.</li>
+    <li>In unordered, have optioins like DFS and BFS</li>
+    </ul>
+    <h2 id="depth-first-search">Depth First Search</h2>
+    <ul>
+    <li>Also in Trees (inorder, preorder, postorder)</li>
+    <li>stack data structure (in iterative version)</li>
+    <li>push starting vertex to stack and mark as checked</li>
+    <li>if not destination, select first adjacent vertex from start vertex</li>
+    <li>repeat until destination found or not</li>
+    <li>if yes, elements in stack are the vertices making up the path</li>
+    <li>if no, pop recent vertice from stack, and select another adjacent vertice</li>
+    <li>repeat until destination fround or all vertices marked( which means no path possible)</li>
+    <li><p>simulations of games (chess engines)</p></li>
+    <li><p>Family Tree example: Searching for living person, would be nearer the bottom of the tree. DFS would go lower levels faster than BFS.</p></li>
+    </ul>
+    <h3 id="dfs-traversal-iterative-using-stack">DFS traversal Iterative using Stack</h3>
+    <ul>
+    <li><p>Follow / Explore one linked path as far as you can, then head back until you find a fork in the road and follow that to the end, then head back until find another untravelled fork in the road.</p></li>
+    <li><p>So useful for going through one chain of possibilities till its end, then going through another chain etc.</p></li>
+    </ul>
+    <ol style="list-style-type: decimal">
+    <li>push root vertex to stack</li>
+    <li>pop vertex from stack (LIFO, so will be the last pushed vertex) and mark as visited</li>
+    <li>push children or connected vertices of popped vertex to stack.</li>
+    <li>Repeat from 2 until no more unvisted vertices left, or element found</li>
+    </ol>
+    <h3 id="dfs-traversal-recursive">DFS traversal Recursive</h3>
+    <ol style="list-style-type: decimal">
+    <li>Start from Root</li>
+    <li>On each child of root, recursively go through each child's children</li>
+    <li>So follow one branch until find a leaf, then head back up and follow down the next branch until find a leaf.</li>
+    </ol>
+    <h2 id="breadth-first-search">Breadth First Search</h2>
+    <ul>
+    <li>Queue in the iterative version</li>
+    <li>something like Level Order Tree Traversal</li>
+    <li>used to find shortest path to a target vertex
+    <ul>
+    <li>p2p network, gps systems, social networking sites</li>
+    </ul></li>
+    <li>Start at root note</li>
+    <li>then scan each node in the first level starting from leftmost node to right</li>
+    <li><p>continue to next level etc, until node found or all nodes scanned</p></li>
+    <li>When traversing one level, need some way of knowing which nodes to traverse when get to next level</li>
+    <li>This is done by storing pointers to child nodes when traversing a level</li>
+    <li><p>BFS can potentially use a lot of memory because of this storing of pointers</p></li>
+    <li><p>Family Tree example: Searching for an old ancestor, who is dead, would be nearer the top of the tree</p></li>
+    </ul>
+    <h2 id="minimal-spanning-tree">Minimal Spanning Tree</h2>
+    <ul>
+    <li>find the minimum number of connected edges needed to visit every vertex</li>
+    <li>can be many different valid paths</li>
+    <li>unweighted graph
+    <ul>
+    <li>the minimal spanning tree in an unweighted graph find the first minimal spanning tree out of many different possibilities.</li>
+    </ul></li>
+    <li>weighted graph
+    <ul>
+    <li>finds the msp with the least weights (shortest path)
+    <ul>
+    <li>1.first vertex is current vertex and checked flag</li>
+    <li>2.loop while number of checked vertices does not equal total vertices</li>
+    <li>3.add all unchecked adjacent vertices and weights to priority queue</li>
+    <li>4.if pq empty after last step, graph has cycle</li>
+    <li>5.remove edge with lowest weight and add to list that makes msp</li>
+    <li>repeat 2 through 5 till 2 breaks</li>
+    </ul></li>
+    </ul></li>
+    </ul>
+    <h2 id="topological-sort">Topological Sort</h2>
+    <ul>
+    <li>In a directed graph, to get an order of correct traversal</li>
+    <li>like minimal spanning tree, can have more than one correct solution, returns first</li>
+    <li>must not be a cyclical graph ( a tree e.g. is not cyclical)</li>
+    <li>if number of edges greater or equal to vertices, then is cyclical graph</li>
+    <li>otherwise called directed acyclic graph</li>
+    <li>works on both connected and nonconnected directed graphs</li>
+    </ul>
+    <h3 id="implement">implement</h3>
+    <ul>
+    <li>find a vertex with no successor
+    <ul>
+    <li>easy using adjacency matrix</li>
+    <li>the row index of a row with all columns equal to 0 is the index for vertex with no successor.</li>
+    </ul></li>
+    <li>delete from graph, add to stack</li>
+    <li>repeat 1 and 2 until graph empty</li>
+    <li>no stack has topological order</li>
+    </ul>
+    <h2 id="a-algorithm">A* Algorithm</h2>
+    <ul>
+    <li>finding paths based on weight, object avoidance etc</li>
+    <li>optimised, solved dynamically by frame, instead of all at once for performace</li>
+    </ul>
+    <h2 id="dijkstras-algorithm">Dijkstra's algorithm</h2>
+    <ul>
+    <li>Edsger Dijkstra</li>
+    </ul>
+
+  </body>
+</html>

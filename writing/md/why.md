@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="data:image/png;base64,">
-<link rel= "stylesheet" href="style.css">
-
-<html>
-  <body>
-    <title> Writing - Stuff </title>
-    
-    <h3>
-     
-      <a href="index.html">Home</a>&nbsp
-      <a href="writing.html">Writing</a>&nbsp
-      <a href="games.html">Games</a>&nbsp
-      <a href="music.html">Music</a>&nbsp
-      <a href="dev.html">Dev</a>&nbsp
-    
-    </h3> 
-
-    <h1> Writing </h1>
-
-    <section id="start">
-      <p>Short stories, articles, musings, and excerpts from longer work(s)</p>
-    </section>
-    
-
-    Philosophical / Personal 
+Philosophical / Personal 
 
     Why am I writing this here?
 
@@ -76,12 +48,4 @@
     
 
 
-
-    
-    
-    
-
-
-
-  </body>
-</html>
+    I'm interested to see what I do.
