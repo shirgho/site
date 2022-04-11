@@ -1,7 +1,15 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
+@media (prefers-color-scheme: dark){
+  body {color:#fff;background:#000}
+  a:link {color:#9cf}
+  a:hover, a:visited:hover {color:#cef}
+  a:visited {color:#c9f}
+}
+
 header{
   text-align: center;
+  
 }
 
 body
@@ -9,17 +17,16 @@ body
     width:60%;
     margin-left:auto;
     margin-right:auto;
-    background:snow;
 }
 
 header h1 {
-  color: rgb(39, 172, 121);
+  color: rgb(190, 36, 36);
   font-size: 2.5em;
   font-weight: 300;
 }
 
 header h2 {
-  color: rgb(39, 172, 121);
+  color: rgb(190, 36, 36);
   font-size: 2.5em;
   font-weight: 300;
 }
@@ -57,16 +64,16 @@ code {
 
 
 a {
-    color: #2b8888;
+    color: #e81c4f;
 }
 
 a:hover {
-  background:  #2b8888;
+  background:  #e81c4f;
   color: white;
 }
 
 header a:hover {
-  background:  #2b8888;
+  background:  #e81c4f;
   color: white;
 }
   
