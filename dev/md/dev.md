@@ -13,7 +13,7 @@ Programming projects and findings, tips, reminders, mistakes etc etc.
 <section id="julia">
 
 <pre> <h4> Julia
-11-04-2022 </h4> </pre>
+11-04-2022 Updated: 12-04-2022</h4> </pre>
 
 Started getting to know [Julia](introToJulia.html "julia").
 

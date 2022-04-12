@@ -18,6 +18,11 @@ body
     background: rgb(255, 255, 255);
 }
 
+body_offwhite {
+  rgb(247, 240, 220)
+  rgb(236, 232, 222);
+}
+
 header h1 {
   color: rgb(39, 172, 121);
   font-size: 2.5em;

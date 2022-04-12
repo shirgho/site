@@ -17,5 +17,16 @@ And of course, the official Julia Manual and Documentation: https://docs.juliala
 
 I will upload my progress [here](https://github.com/shirgho/julia-practice "Github Link")
 
+## Variables and Types
+
+Julia has types. Even if you don't have to declare the type of a variable (which holds an object of some type). But it has types. You can declare types, and the compiler can infer types. This is why Julia is a fast language, and not a slower dynamic language.
+
+And the types have a hierarchical structure.
+
+<img src="../images/types.jpg" alt="Julia Types" width="80%"/>
+
+
+If a function works on a type, it should also work on its subtypes.
+
 
 
