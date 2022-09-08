@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+        <a href="../../about.html">About</a>&nbsp;
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="shaders">Shaders</h1>
+    <p>Shaders are the equivilant of the Gutenberg press for graphics.</p>
+    <p>They are small programs, but the intructions in those programs are exectued all at once for every single pixel on the screen. So the code has to behave differently depending on the position of the pixel on the screen.</p>
+    <p>This can be done because shaders run on the GPU, which can be thought of as consisting of many many small tiny microprocessers running in parallel, instead of just the 4 or 16 cores/threads in a modern CPU. So all these pixels are input in parallely to these tiny chips of the GPU, which also have the added advantage of special hardware powered math functions that work blazinfly fast with floats.</p>
+    <p>However, is hard, because every pixel is kind of like it's own thread in a shader/GPU. They are independant from other threads, blind. Cannot check results of other threads, don't even know what the other threads are doing.</p>
+    <p>They are also memoryless, as soon as they are free, they get another task and pixel to work with. Do not know what they worked on before or what they will work on next.</p>
+    <h2 id="changing-colour-coordinates-with-mouse-coordinates">Changing colour coordinates with mouse coordinates</h2>
+    <h1 id="ifdef-gl_es">ifdef GL_ES</h1>
+    <p>precision mediump float; #endif</p>
+    <p>uniform vec2 u_resolution; uniform vec2 u_mouse; uniform float u_time;</p>
+    <p>void main() { vec2 st = gl_FragCoord.xy/u_resolution; vec2 mc = u_mouse.xy/u_resolution;</p>
+    <pre><code>//gl_FragColor = vec4(st.x,st.y,0.0,1.0);
+    gl_FragColor = vec4(mc.x,mc.y,0.0,1.0);</code></pre>
+    <p>}</p>
+    <p>The gl_FragCoord (0.0,0.0) is at the bottom left of the screen, where you'd expect 0,0 to be. It's black. 1.0,1.0 is at the top right, yellow. 0.0, 1.0 is top left, green, and 1.0,0.0 is bottom right, red.</p>
+    <h2 id="noise">Noise</h2>
+    <p>Noise is randomness, fluctuations. Is noise. Is nice? Is noice. Sometimes. If you want it.</p>
+    <h2 id="gradient-noise">Gradient noise</h2>
+    <ul>
+    <li>commonly used as a procedural texture primitve in computer graphics.</li>
+    <li>not the same as value noise</li>
+    <li>creation of a lattice of random/pseudorandom gradients, dot products of which are then interpolated to obtain values in between the lattices.</li>
+    <li>first implementation was Perlin noise, credited to ken Perlin.</li>
+    <li>later devs were Simplex noise/OpenSimplex noise</li>
+    </ul>
+    <h3 id="extending-2d-gradient-noise-to-3d">Extending 2d gradient noise to 3d</h3>
+    <p>To apply randomness to two dimensions, we need to transform a two dimensional vector into a one dimensional floating point value. (for example, using the dot product gives us a single float from the coordinates of two dimensional vector).</p>
+
+  </body>
+</html>

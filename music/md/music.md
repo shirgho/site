@@ -17,7 +17,7 @@ Music, original songs, demoes, covers, learnings and analysis, explanations for 
 
 After losing a lot of recording over the years because I destroyed my phone, I've decided to push myself to upload recordings to YouTube instead, and write about them here.
 
-The idea is to upload very rough, uncut ideas of songs or melodies or anything. Over time maybe inspiratin strikes and I'll combine the individual ideas, or just let them be.
+The idea is to upload very rough, uncut ideas of songs or melodies or anything. Over time maybe inspiration strikes and I'll combine the individual ideas, or just let them be.
 
 Don't want to lose them completely though. And kinda makes me happy to upload them, even if they're just for my record.
 

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+        <a href="../../about.html">About</a>&nbsp;
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="tree-traversal">Tree Traversal</h1>
+    <h2 id="depth-first-search">Depth First Search</h2>
+    <p>I.e. going through one complete branch of a tree. Following the child nodes until you hit a leaf. Going down, basically, instead of sideways.</p>
+    <h3 id="pre-order-dfs">Pre order DFS</h3>
+    <p>Node, left node, right node</p>
+    <p>OR</p>
+    <p>We list the nodes the first time we pass them. #### Recursive</p>
+    <p>Here, I explicitly use a helper function which is actually the one recursively called, and pass a reference to the results vector into each call, so the vector of nodes added is maintained.</p>
+    <p>Don't need to pass the vector/reference/pointer to vector if globally defined.</p>
+    <p>Or if returning the vector after each function call? Would that work as well? Yes. That would work too. But why pass a copy of the vector all the time. Reference is fine.</p>
+    <pre><code>vector&lt;int&gt; preorderTraversal(TreeNode* root) {
+            
+        vector&lt;int&gt; preorder = {};
+        
+        if (!root)
+            return preorder;
+    
+        preorder.push_back(root-&gt;val);
+        
+        preorderTraversalRec(root-&gt;left, preorder);
+        preorderTraversalRec(root-&gt;right, preorder);
+        
+        return preorder;
+    }
+        
+    void preorderTraversalRec(TreeNode* node, vector&lt;int&gt; &amp;preorder) {
+        if(!node)
+            return;
+        
+        preorder.push_back(node-&gt;val);
+        
+        preorderTraversalRec(node-&gt;left, preorder);
+        preorderTraversalRec(node-&gt;right, preorder);
+    }</code></pre>
+    <h4 id="iterative">Iterative</h4>
+    <p>The Iterative version of pre order can be used just by traversing the tree through a stack, and pushing the right child first and then the left child.</p>
+    <pre><code>vector&lt;int&gt; preorderTraversal(TreeNode* root){
+        stack&lt;TreeNode*&gt; s = {};
+        vector&lt;int&gt; result = {};
+        
+        if (root == nullptr) return result;
+        s.push(root);
+        
+        while(stack.size()){
+            TreeNode* current = stack.top();
+            s.pop();
+            if(current != nullptr){
+                result.push_back(current-&gt;val);
+                if(current-&gt;right != nullptr){
+                    stack.push(current-&gt;right);
+                }
+                if(current-&gt;left != nullptr){
+                    stack.push(current-&gt;left);
+                }
+            }    
+        }
+        
+        return result;
+            
+            
+    }
+    </code></pre>
+    <p>However, I will use the following version, because it can be quickly adjusted for the Inorder and Post order versions.</p>
+    <pre><code>// we push to result as soon as we push to stack/traverse the node
+    vector&lt;int&gt; preorderTraversal(TreeNode* root) {
+            
+        vector&lt;int&gt; result = {};
+        stack&lt;TreeNode*&gt; s = {};
+        TreeNode* last_pop = root;
+        
+        if(root == nullptr)
+            return result;
+        else {
+            s.push(root);
+            result.push_back(s.top()-&gt;val); 
+        }
+        
+        while(!s.empty()){
+            TreeNode* current = s.top();
+            if(current-&gt;left != nullptr &amp;&amp; last_pop != current-&gt;left &amp;&amp; last_pop != current-&gt;right){
+                s.push(current-&gt;left);
+                result.push_back(s.top()-&gt;val);
+            } else if (current-&gt;right != nullptr &amp;&amp; last_pop != current-&gt;right){
+                s.push(current-&gt;right);
+                result.push_back(s.top()-&gt;val);
+            } else {
+                s.pop();
+                last_pop = current;
+            }
+        }
+        
+        return result;
+    }
+    </code></pre>
+    <h3 id="in-order-dfs">In order DFS</h3>
+    <p>leftNode, Node, RightNode</p>
+    <p>OR</p>
+    <p>We list the nodes the second time we pass them.</p>
+    <h4 id="recursive">Recursive</h4>
+    <pre><code>vector&lt;int&gt; inorderTraversal(TreeNode* root) {
+            
+        vector&lt;int&gt; inorder = {};
+        
+        if (!root)
+            return inorder;
+    
+        inorderTraversalRec(root-&gt;left, inorder);
+        inorder.push_back(root-&gt;val);
+        inorderTraversalRec(root-&gt;right, inorder);
+        
+        return inorder;
+    }
+        
+    void inorderTraversalRec(TreeNode* node, vector&lt;int&gt; &amp;inorder) {
+        if(!node)
+            return;
+        
+        inorderTraversalRec(root-&gt;left, inorder);
+        inorder.push_back(node-&gt;val);
+        inorderTraversalRec(node-&gt;right, inorder);
+    }</code></pre>
+    <h4 id="iterative-1">Iterative</h4>
+    <p>Here is the pushing right and left to stack version:</p>
+    <pre><code>vector&lt;int&gt; inorderTraversal(TreeNode* root) {
+        vector&lt;int&gt; r = {};
+        stack&lt;TreeNode*&gt; s;
+        stack&lt;TreeNode*&gt; w;
+        
+        if(root == nullptr) 
+            return r;
+        else 
+            s.push(root);
+        
+        while(!s.empty()){
+            
+            TreeNode* current = s.top();
+            TreeNode* prev;
+            if(!w.empty())
+                    prev = w.top();
+            else
+                prev = nullptr;
+            
+            // compare with previously_popped    
+            if(prev != nullptr){
+                cout &lt;&lt; &quot;prev: &quot; &lt;&lt; prev-&gt;val &lt;&lt; endl;
+                // if current is not child of w.top(), then push w.top() to r and w.pop()
+                if(current != prev-&gt;right &amp;&amp; current != prev-&gt;left){
+                    cout &lt;&lt; &quot;current: &quot; &lt;&lt; current-&gt;val &lt;&lt; endl;
+                    cout &lt;&lt; &quot;r1: &quot; &lt;&lt; prev-&gt;val &lt;&lt; endl;
+                    r.push_back(prev-&gt;val);
+                    w.pop();
+                    continue;
+                    
+                } 
+                // if current is right child of w.top(), push w.top() to r, and w.pop() 
+                if(current == prev-&gt;right){
+                    cout &lt;&lt; &quot;r2: &quot; &lt;&lt; prev-&gt;val &lt;&lt; endl;
+                    r.push_back(prev-&gt;val);
+                    w.pop();
+                }
+                    
+            } 
+            // push current to w for next cycle comparisons
+            s.pop();
+            w.push(current);
+            
+            // check if has left and/or right child
+                // if so, push children to stack
+            if(current-&gt;right != nullptr){
+                s.push(current-&gt;right);
+            }
+            if(current-&gt;left != nullptr){
+                s.push(current-&gt;left);
+            }
+            // if no child
+                // push to r
+                // pop w so we don&#39;t have this child node for next cycle comparisons
+            if(current-&gt;left == nullptr &amp;&amp; current-&gt;right == nullptr){
+                r.push_back(current-&gt;val);
+                cout &lt;&lt; &quot;r: &quot; &lt;&lt; current-&gt;val &lt;&lt; endl;
+                w.pop();
+            }
+                
+        }     
+        
+        while(!w.empty()){
+            TreeNode* prev = w.top();
+            r.push_back(prev-&gt;val);
+            w.pop();
+        }
+        
+        return r;
+            
+    }</code></pre>
+    <p>Here is the easy to adjust version:</p>
+    <pre><code>// we push to result if leaf, or if doesn&#39;t have right child (because means we are returning from some leaf nodes)
+    vector&lt;int&gt; inorderTraversal(TreeNode* root) {
+            
+        vector&lt;int&gt; result = {};
+        stack&lt;TreeNode*&gt; s = {};
+        TreeNode* last_pop = root;
+        
+        if(root == nullptr)
+            return result;
+        else {
+            s.push(root); 
+        }
+        
+        while(!s.empty()){
+            TreeNode* current = s.top();
+            if(current-&gt;left != nullptr &amp;&amp; last_pop != current-&gt;left &amp;&amp; last_pop != current-&gt;right){
+                s.push(current-&gt;left);
+            } else if (current-&gt;right != nullptr &amp;&amp; last_pop != current-&gt;right){
+                result.push_back(current-&gt;val);
+                s.push(current-&gt;right);
+            } else {
+                s.pop();
+                last_pop = current;
+                if(current-&gt;right == nullptr)
+                    result.push_back(current-&gt;val);
+            }
+        }
+        
+        return result;
+    }</code></pre>
+    <h3 id="post-order-dfs">Post order DFS</h3>
+    <p>leftNode, RightNode, Node</p>
+    <p>OR</p>
+    <p>We list the nodes the last time we pass them.</p>
+    <h4 id="recursive-1">Recursive</h4>
+    <pre><code>vector&lt;int&gt; postorderTraversal(TreeNode* root) {
+            
+        vector&lt;int&gt; postorder = {};
+        
+        if (!root)
+            return postorder;
+    
+        postorderTraversalRec(root-&gt;left, postorder);
+        postorderTraversalRec(root-&gt;right, postorder);
+        postorder.push_back(root-&gt;val);
+        
+        return postorder;
+    }
+        
+    void postorderTraversalRec(TreeNode* node, vector&lt;int&gt; &amp;postorder) {
+        if(!node)
+            return;
+        
+        postorderTraversalRec(root-&gt;left, postorder);
+        postorderTraversalRec(node-&gt;right, postorder);
+        postorder.push_back(root-&gt;val);
+    }</code></pre>
+    <h4 id="iterative-2">Iterative</h4>
+    <p>Here is the pushing right and left to stack version:</p>
+    <pre><code>vector&lt;int&gt; postorderTraversal(TreeNode* root){
+           
+            stack&lt;TreeNode*&gt; w = {};
+            stack&lt;TreeNode*&gt; s = {};
+            vector&lt;int&gt; r = {};
+            
+            if(root == nullptr) 
+                return r;
+            else
+                s.push(root);
+            
+            TreeNode* pushed = nullptr;
+            while(!s.empty()){
+                
+                TreeNode* popped = s.top();
+                s.pop();
+                
+                while(pushed != nullptr){
+                    if(pushed-&gt;left != popped &amp;&amp; pushed-&gt;right != popped){
+                        r.push_back(pushed-&gt;val);  
+                        w.pop();
+                        pushed = w.top();
+                    } else {
+                        break;
+                    }
+                } 
+                w.push(popped);
+                
+                if(popped -&gt; right != nullptr){
+                    s.push(popped -&gt; right);
+                    pushed = w.top(); 
+                }
+                if(popped -&gt; left != nullptr){
+                    s.push(popped -&gt; left);
+                    pushed = w.top(); 
+                }
+                if(popped -&gt; left == nullptr &amp;&amp; popped -&gt; right == nullptr){
+                    r.push_back(popped-&gt;val);
+                    w.pop();
+                    if(!w.empty())
+                        pushed = w.top();      
+                }
+                     
+            }
+            
+            while(!w.empty()){
+                r.push_back(w.top()-&gt;val);
+                w.pop();
+            }
+            
+            return r;
+        }   </code></pre>
+    <p>Here is the easy to adjust version:</p>
+    <pre><code>// we push to result if leaf, or if doesn&#39;t have right child (because means we are returning from some leaf nodes)
+    vector&lt;int&gt; postorderTraversal(TreeNode* root) {
+            
+        vector&lt;int&gt; result = {};
+        stack&lt;TreeNode*&gt; s = {};
+        TreeNode* last_pop = root;
+        
+        if(root == nullptr)
+            return result;
+        else {
+            s.push(root); 
+        }
+        
+        while(!s.empty()){
+            TreeNode* current = s.top();
+            if(current-&gt;left != nullptr &amp;&amp; last_pop != current-&gt;left &amp;&amp; last_pop != current-&gt;right){
+                s.push(current-&gt;left);
+            } else if (current-&gt;right != nullptr &amp;&amp; last_pop != current-&gt;right){
+                s.push(current-&gt;right);
+            } else {
+                s.pop();
+                last_pop = current;
+                result.push_back(current-&gt;val);
+            }
+        }
+        
+        return result;
+    }</code></pre>
+    <h2 id="breadth-first-search">Breadth First Search</h2>
+    <p>I.e. going level by level of the tree. Not going down one complete branch to its leaves.</p>
+    <p>No preorder, inordering etc here at least.</p>
+    <p>But should be some recursive way?</p>
+    <p>First, the iterative this time, and using a queue instead of stack.</p>
+    <h3 id="simple-iterative-version-using-queue">Simple Iterative version using queue</h3>
+    <p>This returns a simple list of the bfs earched nodes.</p>
+    <pre><code>vector&lt;int&gt; levelOrder(TreeNode* root) {
+            queue&lt;TreeNode*&gt; q = {};
+            vector&lt;int&gt; results = {};
+            
+            if(root == nullptr)
+                return results;
+            else
+                q.push(root);
+            
+            TreeNode* prev = root;
+            while(!q.empty()){
+                
+                TreeNode* current = q.front();
+                q.pop();
+    
+                results.push_back(current-&gt;val);
+                
+                if(current -&gt; left != nullptr){
+                    q.push(current-&gt;left);
+                }
+                if(current -&gt; right != nullptr){
+                    q.push(current-&gt;right);
+                }
+                       
+            }
+            
+    
+            return results;
+            
+    }
+    </code></pre>
+    <h4 id="returning-vector-of-vectors">Returning Vector of Vectors</h4>
+    <p>So as to group the levels seperately:</p>
+    <p>My own logic, which is kinda painful as always:</p>
+    <p>// Push nodes in level to queue // Pop node and add its children to queue // In affect, going through the queue is going through level traversal // as the current level's nodes are popped first, FIFO, then their children come to top</p>
+    <p>// have to return vector of vectors // currently, I check if prev node is parent of current node. if so, make a new vector and add to this, so new level. // I could extend this check to prev and prevprev node, to cover right child as well // or I could use the fact that we have a binary tree, and introduce a new vector after every two elements? // unfortunately no, because there can be from 0 up to 2x children in a level, where x is number of nodes in prev level</p>
+    <p>// now have a temp array, and I check against this temp array with the current node // if any nodes in the temp array are parents of current node, then I add the temp array to answer and clear it // and start adding the current node and next ones to the temp array // this should continue until we go a level down, which means current node is a child of one of the temp array nodes</p>
+    <p>// Also important to take care that root isn't added twice to the prev array, otherwise the child would be added twice to different blocks in the answer.</p>
+    <pre><code>vector&lt;vector&lt;int&gt;&gt; levelOrder(TreeNode* root) { 
+            queue&lt;TreeNode*&gt; q = {};
+            vector&lt;TreeNode*&gt; prev = {};
+            vector&lt;vector&lt;int&gt;&gt; results = {};
+            vector&lt;int&gt; result = {};
+            
+            if(root == nullptr)
+                return results;
+            else {
+                q.push(root);
+            }
+                
+            
+            while(!q.empty()){
+                
+                bool levelFlag = 0;
+                TreeNode* current = q.front();
+                q.pop();
+    
+                
+                if(current -&gt; left != nullptr){
+                    q.push(current-&gt;left);
+                }
+                if(current -&gt; right != nullptr){
+                    q.push(current-&gt;right);
+                }
+                
+                // if current is child of prev, then add result array to results, clear it, and add current to result
+                for(TreeNode* prevNode : prev ){
+                    if(current == prevNode-&gt;left || current == prevNode-&gt;right){   
+                        levelFlag = 1;
+                        results.push_back(result);
+                        
+                        result.clear();
+                        result.push_back(current-&gt;val);
+                        
+                        prev.clear();
+                        prev.push_back(current);
+    
+                    } 
+                    
+                }
+                  
+                if(!levelFlag){
+                    result.push_back(current-&gt;val);
+                    prev.push_back(current);
+                }
+                    
+                
+            }
+            
+            if(!result.empty()){
+                results.push_back(result);
+            }
+            
+            return results;
+            
+        }
+    }
+    </code></pre>
+    <p>And here is some logic I adapted from the discussion section, which just uses a for loop to go through one iteration of the queue. Becuase that must be the end of the level. Then the next while loop iteration starts another for loop iteration, which only covers the queue size of the previous rounds added children to the queue. Much cleaner. And works using the queue property of adding to the back and popping from the front. The first in ones are the first outs.</p>
+    <pre><code>vector&lt;vector&lt;int&gt;&gt; levelOrder(TreeNode* root) { 
+        if(root == nullptr)
+            return {};
+            
+        vector&lt;vector&lt;int&gt;&gt; answer;
+        queue&lt;TreeNode*&gt; level;
+        vector&lt;int&gt; temp;
+        
+        level.push(root);
+        while(!level.empty()){
+            int size = level.size();
+            TreeNode* node;
+            
+            //go through all elements in queue (which were stored in queue before the for loop starts)
+            for(int i = 0; i &lt; size; i++){
+                // pop and get top node of queue
+                node = level.front();
+                level.pop();
+    
+                // push children of popped top node to queue
+                if(node == nullptr)
+                    continue;
+                if(node-&gt;left != nullptr)
+                    level.push(node-&gt;left);
+                if(node-&gt;right != nullptr)
+                    level.push(node-&gt;right);
+                
+                // push popped node to temp array
+                temp.push_back(node-&gt;val);
+            }  
+            
+            //after for loop done, means level done, because went through previously pushed children in queue
+            answer.push_back(temp);
+            temp.clear();
+        }    
+        
+        return answer;
+    </code></pre>
+
+  </body>
+</html>

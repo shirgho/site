@@ -1,5 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
 
+canvas { 
+  background: #eee; display: block; margin: 0 auto; 
+}
+
 header{
   text-align: center;
 }

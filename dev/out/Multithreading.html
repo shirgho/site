@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+        <a href="../../about.html">About</a>&nbsp;
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="multi-threading">Multi Threading</h1>
+    <h2 id="concurrency-vs-parallelism">Concurrency vs Parallelism</h2>
+    <ul>
+    <li>Parallelism, we run multiple copies of the same program simultaneously, but they are executed on different data. E.g. GPU passed different data, processed at same time, and return to some main thread. But no danger of memory access at same time here.</li>
+    <li>Concurrent programming involves a shared memory location, and the different threads actually &quot;read&quot; the information provided by previous threads, and use the same variables amongst them.</li>
+    </ul>
+    <p>https://www.educative.io/blog/modern-multithreading-and-concurrency-in-cpp</p>
+    <h2 id="data-race">data race</h2>
+    <ul>
+    <li>can occur when at least two threads can cimultaneously access a cariable or memory loocation, and tries to access it.</li>
+    <li>can result in undefined wolfish behaviour.</li>
+    </ul>
+
+  </body>
+</html>

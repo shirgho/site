@@ -87,10 +87,16 @@ buckets into the original container. After potentially multiple passes of doing 
 - insertion removal from heap is O(log n)
 - sort is n log(n) because function has to run on each element, so times n (actually 2 x n, but is constant).
 
-
-
 ## Intro Sort
 
+
+## Cyclic Sort
+
+As seen in shufflestringCyclicSort:
+- Loop through array, but stay on current i until indices[i] matches with i
+- Do swaps here until the above is true
+- Then move to next i until length of array covered.
+- Usually first few i's enough to sort array.
 
 # Ordered Arrays
 

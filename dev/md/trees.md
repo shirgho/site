@@ -9,16 +9,8 @@ The nodes of a linked list are kinda like a tree, each connected by a one-direct
 
 A tree itself is a type of graph.
 
-## Traversal
-
-### BFS or Level Order Traversal
-More in graphs
-### Depth First Searches
--- preorder: node, left, right
-    - 
--- postorder: left, right, node
-    - used to delete a tree e.g. because child nodes visited first
--- inorder: left, node, right
+## Traversals
+Go here[./treeTraversals.html] for traversal info.
 
 ## General Trees
 - Root, children, siblings, Parents
@@ -74,8 +66,8 @@ More in graphs
 
 ## Heaps
 - weakly ordered binary tree
-- completely silled from left to right without gaps
-- every node in heap is larger than or euqual to its child nodes
+- completely filled from left to right without gaps
+- every node in heap is larger than or equal to its child nodes
 
 - purpose usually to allow fast removal from top of heap (getting the max value repeatedly)
 

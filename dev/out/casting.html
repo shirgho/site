@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+        <a href="../../about.html">About</a>&nbsp;
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="casts">Casts</h1>
+    <p>Casting a spell. Casting a void* pointer to an int* pointer. Same thing?</p>
+    <p>Many types of casts of course. No simple scene.</p>
+    <h2 id="static_cast">static_cast</h2>
+    <p>preserves the address when casting from one pointer type to another.</p>
+    <p>int* a = new int(); void* b = static_cast<void*>(a); int* c = static_cast<int*>(b);</p>
+    <p>all pointers hold the same memory address.</p>
+    <h2 id="reinterpret_cast">reinterpret_cast</h2>
+    <p>guess should only be used when you don't know the details of some opaque class you have to work with. So you reinterpret your objects to the opaque class so functions can work with your actually different object, and then reinterpret_cast it back to work with your own object again.</p>
+    <p>To be honest, I don't really get the difference.</p>
+    <h1 id="references">References</h1>
+    <p>https://stackoverflow.com/questions/573294/when-to-use-reinterpret-cast</p>
+
+  </body>
+</html>

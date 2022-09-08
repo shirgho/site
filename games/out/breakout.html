@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title> Games - Stuff </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="../../dev/out/dev.html">Dev</a>&nbsp
+        <a href="../../about.html">About</a>&nbsp;
+      
+      </h3> 
+  
+    </header>
+    
+    <canvas id="myCanvas" width="480" height="320"></canvas>
+
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+
+      //ball coords
+      let x = canvas.width/2;
+      let y = canvas.height-30;
+      let dx = 2;
+      let dy = -2;
+      var ballRadius = 10;
+
+      function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+      }
+
+      function draw() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          drawBall();
+          x += dx;
+          y += dy;
+
+          if(x + dx + ballRadius > canvas.width || x + dx - ballRadius < 0) {
+            dx = -dx;
+          }
+
+          if(y + dy + ballRadius> canvas.height || y + dy - ballRadius < 0) {
+              dy = -dy;
+          }
+
+      }
+
+
+      setInterval(draw, 10);
+
+    </script>
+
+    
+  </body>
+</html>

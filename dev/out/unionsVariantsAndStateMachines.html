@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="date" content=''>
+<link rel="icon" type="image/png" href="data:image/png;base64,">
+<link rel= "stylesheet" href="../../css/style.css">
+
+<html>
+  <body>
+    <title>  </title>
+    <header>
+      <h3>
+     
+        <a href="../../index.html">Home</a>&nbsp
+        <a href="../../writing/out/writing.html">Writing</a>&nbsp
+        <a href="../../games/out/games.html">Games</a>&nbsp
+        <a href="../../music/out/music.html">Music</a>&nbsp
+        <a href="dev.html">Dev</a>&nbsp
+        <a href="../../about.html">About</a>&nbsp;
+      
+      </h3> 
+  
+    </header>
+    
+    <h1 id="unions">Unions</h1>
+    <p>https://en.cppreference.com/w/cpp/language/union</p>
+    <ul>
+    <li>A special class type that can only hold one of its non-static data members at a time.</li>
+    <li>Union is only as big as necessary to hold its largest data member.</li>
+    </ul>
+    <h1 id="variants">Variants</h1>
+    <ul>
+    <li>std::variant is a class template that represents a type-safe union.</li>
+    <li>That means, at a certain point in time, one type of the possibly many types in the variant/union is defined/used.</li>
+    <li>So it can let you use a variable like you use them in dynamically typed languages.</li>
+    </ul>
+    <h2 id="variants-examples">Variants Examples</h2>
+    <h3 id="state-machines">State Machines</h3>
+    <p>Very nice description of how to use variants instread of enum unions to make more customised state machines: https://www.cppstories.com/2019/06/fsm-variant-game/</p>
+    <h3 id="godot-game-engine">Godot Game Engine</h3>
+    <p>https://docs.godotengine.org/en/stable/development/cpp/variant_class.html</p>
+    <p>So, variants are used everywhere in Godot. Not for storing data permenantly, but to hold them for communication, editing, serialization and generally moving them around in a generic container instead of statically typing everything.</p>
+    <p>HOWEVER, they don't use the std::variant, but use a class made up of enums.</p>
+
+  </body>
+</html>
