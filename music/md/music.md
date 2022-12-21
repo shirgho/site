@@ -13,6 +13,29 @@ Music, original songs, demoes, covers, learnings and analysis, explanations for 
 <section id="Musical Ideas">
 
 <pre> <h4> Musical Ideas
+19-10-2022 </h4> </pre>
+
+Some more small tunes and stuff uploaded over the past months:
+
+[Yaar](https://youtu.be/QcWIrI5A0bs "Yaar")
+
+For my yaars who need it.
+
+[Kidher Ja rahay hain](https://youtu.be/msTROBQTfqY "Kidher Ja rahay hain")
+
+Did not sing it well, but it's the idea for now.
+
+[Riff Drive](https://youtu.be/h4BABGtDuKo "Riff Drive")
+
+Even though just a simple riff, it fits in well here, because it is kind of a forgettable riff lol, and I probably would forget it and not do anything with it.
+Not that I've done anything with it since.
+
+</section>
+
+
+<section id="Musical Ideas">
+
+<pre> <h4> Musical Ideas
 14-04-2022 </h4> </pre>
 
 After losing a lot of recording over the years because I destroyed my phone, I've decided to push myself to upload recordings to YouTube instead, and write about them here.
@@ -42,9 +65,9 @@ Also love the solo and Julian's vocals over it, especially when live, even if I 
 
 In the studio version, it's "I loved you, before, I, saw youuuuuuuuu." Something beautiful there. I think he changes it now after the divorce though, haha.
 
-Watch one of the performances, where they keep the solo structure and leave out the autotune [here]("https://www.youtube.com/watch?v=oPWspGwb7JE" "Razorblade live").
+Watch one of the performances, where they keep the solo structure and leave out the autotune [here](https://www.youtube.com/watch?v=oPWspGwb7JE "Razorblade live").
 
-The [Chile version]("https://youtu.be/YSfmJvLpF7U?t=2771" "Razorblade live") goes even heavier on the groove and cumbia melody change, and heavier on Casablanca auto tune style. 
+The [Chile version](https://youtu.be/YSfmJvLpF7U?t=2771 "Razorblade live") goes even heavier on the groove and cumbia melody change, and heavier on Casablanca auto tune style. 
 
 Bonus: The Strokes and the crowd collaborate to make a song over Ole Ole Ole! Right after the Razorblade performance.
 

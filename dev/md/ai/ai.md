@@ -29,3 +29,17 @@ Basically a branch of the data driven / statistical AI fields, where emphasis is
 #### Deap Learning
 Deep Learning is a training method in Machine Learning, which uses layers of neural nets to simulate how a human brain learns, and uses these neural net models to train the AI system to match inputs to correct outputs.
 
+#### Foundational Models
+
+Nowadays, systems employ neural networks, but
+at a vastly different scale. (Supercomputers, thousands of GPUS, woven into a complex fabric of high-speed network interconnects and data-storage infrastructure.)
+
+##### Pre-training
+
+Neural network is first trained on a general purpose
+dataset using significant amounts of computational resources, and then fine-tuned for the task at hand using a much smaller amount of data and compute resources.
+
+e.g. GPT-3, DALL-E, CLIP, LAMDA
+
+- quazel, make-a-video
+

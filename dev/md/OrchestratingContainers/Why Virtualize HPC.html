@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en-US"><script async="" src="Why%20Virtualize%20HPC_files/feedback.js"></script><script async="" src="Why%20Virtualize%20HPC_files/esp.js"></script><script type="text/javascript" id="__gaOptOutExtension">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="microsites-utag" content="https://tags.tiqcdn.com/utag/vmware/microsites-privacy/prod/utag.js">
+<meta name="onetrust-data-domain" content="b9242434-9feb-47be-a894-3a9e658fdd50">
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link class="user" href="Why%20Virtualize%20HPC_files/responsive.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://octo.vmware.com/wp-content/themes/vmware-blog-1.9.2/favicon.ico">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v18.5.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Why Virtualize HPC? - Office of the CTO Blog</title>
+	<link rel="canonical" href="https://octo.vmware.com/why-virtualize-hpc/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Why Virtualize HPC? - Office of the CTO Blog">
+	<meta property="og:description" content="My name is Josh Simons.&nbsp; I work for Steve Herrod in the Office of the CTO here at VMware, having joined the company in March of this year from Sun Microsystems. I’m an HPC guy. That’s High Performance Computing, for those not familiar. HPC is all about compute and storage intensive workloads, which are often … Continued">
+	<meta property="og:url" content="https://octo.vmware.com/why-virtualize-hpc/">
+	<meta property="og:site_name" content="Office of the CTO Blog">
+	<meta property="article:published_time" content="2010-08-26T00:07:17+00:00">
+	<meta property="og:image" content="https://octo.vmware.com/wp-content/uploads/sites/18/2021/05/default-blog-image.jpeg">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="628">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:creator" content="@joshsimons">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Josh Simons">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="11 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://octo.vmware.com/#website","url":"https://octo.vmware.com/","name":"Office of the CTO Blog","description":"Learn more about VMware’s technical areas of expertise and key CTO focus areas. This blog will highlight the various efforts, programs, and people of VMware’s Office of the CTO.","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://octo.vmware.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://octo.vmware.com/why-virtualize-hpc/#primaryimage","inLanguage":"en-US","url":"https://octo.vmware.com/wp-content/uploads/sites/18/2021/05/default-blog-image.jpeg","contentUrl":"https://octo.vmware.com/wp-content/uploads/sites/18/2021/05/default-blog-image.jpeg","width":1000,"height":628,"caption":"Blue glowing high energy plasma field in space, computer generated abstract background"},{"@type":"WebPage","@id":"https://octo.vmware.com/why-virtualize-hpc/#webpage","url":"https://octo.vmware.com/why-virtualize-hpc/","name":"Why Virtualize HPC? - Office of the CTO Blog","isPartOf":{"@id":"https://octo.vmware.com/#website"},"primaryImageOfPage":{"@id":"https://octo.vmware.com/why-virtualize-hpc/#primaryimage"},"datePublished":"2010-08-26T00:07:17+00:00","dateModified":"2010-08-26T00:07:17+00:00","author":{"@id":"https://octo.vmware.com/#/schema/person/3394e87ad2e1ecb2378f2cd6f2eb6411"},"breadcrumb":{"@id":"https://octo.vmware.com/why-virtualize-hpc/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://octo.vmware.com/why-virtualize-hpc/"]}]},{"@type":"BreadcrumbList","@id":"https://octo.vmware.com/why-virtualize-hpc/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://octo.vmware.com/"},{"@type":"ListItem","position":2,"name":"Why Virtualize HPC?"}]},{"@type":"Person","@id":"https://octo.vmware.com/#/schema/person/3394e87ad2e1ecb2378f2cd6f2eb6411","name":"Josh Simons","image":{"@type":"ImageObject","@id":"https://octo.vmware.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/58be3b3a71dc1d33a563014f9a09a94d?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/58be3b3a71dc1d33a563014f9a09a94d?s=96&d=mm&r=g","caption":"Josh Simons"},"description":"With over 20 years of experience in High Performance Computing, Josh currently leads an effort within VMware's Office of the CTO to bring the full value of virtualization to HPC. Previously, he was a Distinguished Engineer at Sun Microsystems with broad responsibilities for HPC direction and strategy. He joined Sun in 1996 from Thinking Machines Corporation, a pioneering company in the area of Massively Parallel Processors (MPPs), where he held a variety of technical positions. Josh has worked on developer tools for distributed parallel computing, including language and compiler design, scalable parallel debugger design and development, and MPI. He has also worked in the areas of 3D graphics, image processing, and realtime device control. Josh has an undergraduate degree in Engineering from Harvard College and a Masters in Computer Science from Harvard University. He has served as a member of the OpenMP ARB Board of Directors since 2002 and is currently serving as Chairman of the Board.","sameAs":["https://twitter.com/joshsimons"],"url":"https://octo.vmware.com/author/josh_simons/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://octo.vmware.com/">
+<link rel="dns-prefetch" href="https://tags.tiqcdn.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Office of the CTO Blog » Why Virtualize HPC? Comments Feed" href="https://octo.vmware.com/why-virtualize-hpc/feed/">
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/octo.vmware.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script><script src="Why%20Virtualize%20HPC_files/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-quicklatex-format-css" href="Why%20Virtualize%20HPC_files/quicklatex-format.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="Why%20Virtualize%20HPC_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="prismatic-blocks-css" href="Why%20Virtualize%20HPC_files/styles-blocks.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel="stylesheet" id="ctf_styles-css" href="Why%20Virtualize%20HPC_files/ctf-styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="email-subscribers-css" href="Why%20Virtualize%20HPC_files/email-subscribers-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="g-onetrust-style-css" href="Why%20Virtualize%20HPC_files/g_onetrust.css" type="text/css" media="all">
+<link rel="stylesheet" id="sage/css-css" href="Why%20Virtualize%20HPC_files/main-a222e33292.css" type="text/css" media="all">
+<script type="text/javascript" id="jquery-core-js-extra">
+/* <![CDATA[ */
+var ctf = {"ajax_url":"https:\/\/octo.vmware.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Why%20Virtualize%20HPC_files/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="Why%20Virtualize%20HPC_files/jquery-migrate.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="Why%20Virtualize%20HPC_files/g_onetrust.js" id="g-onetrust-javascript-js"></script>
+<script type="text/javascript" src="Why%20Virtualize%20HPC_files/utag.js" id="ot_sdk_script0-js"></script>
+<script type="text/javascript" src="Why%20Virtualize%20HPC_files/wp-quicklatex-frontend.js" id="wp-quicklatex-frontend-js"></script>
+<link rel="https://api.w.org/" href="https://octo.vmware.com/wp-json/"><link rel="alternate" type="application/json" href="https://octo.vmware.com/wp-json/wp/v2/posts/698"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://octo.vmware.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://octo.vmware.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 6.0">
+<link rel="shortlink" href="https://octo.vmware.com/?p=698">
+<link rel="alternate" type="application/json+oembed" href="https://octo.vmware.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Focto.vmware.com%2Fwhy-virtualize-hpc%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://octo.vmware.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Focto.vmware.com%2Fwhy-virtualize-hpc%2F&amp;format=xml">
+<style type="text/css">02/02/2015</style>        <!-- Custom Twitter Feeds CSS -->
+        <style type="text/css">
+            data  
+        </style>
+        <link rel="icon" href="https://octo.vmware.com/wp-content/uploads/sites/18/2017/04/cropped-favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="https://octo.vmware.com/wp-content/uploads/sites/18/2017/04/cropped-favicon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://octo.vmware.com/wp-content/uploads/sites/18/2017/04/cropped-favicon-180x180.png">
+<meta name="msapplication-TileImage" content="https://octo.vmware.com/wp-content/uploads/sites/18/2017/04/cropped-favicon-270x270.png">
+<script type="text/javascript" src="Why%20Virtualize%20HPC_files/utag_data.js"></script>
+<script type="text/javascript">utag_data.content_system = "Microsites : Blogs";</script>
+      <script type="text/javascript">
+  (function() {
+    var didInit = false;
+    function initMunchkin() {
+      if(didInit === false) {
+        didInit = true;
+        // Add configuration settings to the init method
+        Munchkin.init('048-SZW-045');
+      }
+    }
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//munchkin.marketo.net/munchkin.js';
+    s.onreadystatechange = function() {
+      if (this.readyState == 'complete' || this.readyState == 'loaded') {
+        initMunchkin();
+      }
+    };
+    s.onload = initMunchkin;
+    document.getElementsByTagName('head')[0].appendChild(s);
+  })();
+  </script><script type="text/javascript" async="" src="Why%20Virtualize%20HPC_files/munchkin.js"></script>
+<script>bazadebezolkohpepadr="452201586"</script><script type="text/javascript" src="Why%20Virtualize%20HPC_files/1af40cd6" defer="defer"></script></head>
+  <body class="post-template-default single single-post postid-698 single-format-standard why-virtualize-hpc sidebar-primary">
+    <!--[if IE]>
+      <div class="alert alert-warning">
+        You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.      </div>
+    <![endif]-->
+    <header class="banner">
+  <nav class="global-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-9">
+        <div class="brand-links">
+                      <button class="hamburger mobile-trigger" type="button" aria-controls="primaryNavigation" aria-expanded="false" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="label">Menu</span>
+            </button>
+                    <a href="https://www.vmware.com/"><img src="Why%20Virtualize%20HPC_files/vmware-logo-large.png" alt="VMware"></a>
+          <a class="name" href="https://octo.vmware.com/">Office of the CTO Blog</a>
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-4 col-xl-3 text-right right-nav">
+        <div class="search-wrap">
+          <form class="search-form" method="get" action="https://octo.vmware.com/">
+  <label class="sr-only" for="s">Search</label>
+  <input class="search-field" placeholder="Search" name="s" data-ddg-inputtype="unknown">
+  <input type="submit" value="Submit Search" class="search-submit btn">
+</form>
+<button class="search-btn mobile-trigger" type="button" aria-expanded="false" aria-label="Toggle search">
+    <span class="sr-only">Search</span>
+</button>        </div>
+        <button class="dots mobile-trigger" type="button" aria-controls="globalNavigation" aria-expanded="false" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="links-wrap" id="globalNavigation">
+          <ul class="links">
+            <li><a href="https://blogs.vmware.com/">VMware Blogs</a></li>
+            <li><a href="https://communities.vmware.com/">Communities</a></li>
+          </ul>
+                      <ul class="social-links d-lg-none">
+                              <li class="icon icon-twitter">
+                  <a href="https://twitter.com/vmwocto" target="_twitter" rel="noopener noreferrer">
+                    <span class="sr-only">Twitter</span>
+                  </a>
+                </li>
+                          </ul>
+                  </div>
+      </div>
+    </div>
+  </div>
+</nav>  <nav class="primary-nav" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div id="primaryNavigation" class="col-12 col-lg-9 main-nav" aria-label="Main Menu">
+                <div class="gradient-mask-wrap">
+                    <div class="gradient-menu-wrap">
+                        <ul id="menu-cto-menu" class="menu-top-nav" role="menubar"><li id="menu-item-3790" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-3790"><a href="https://octo.vmware.com/" role="menuitem" aria-haspopup="true" aria-expanded="false">Home</a><button aria-expanded="false" aria-controls="submenu-3790"><span class="sr-only">Toggle submenu</span></button><div class="gradient-mask"><div class="arrow"></div></div>
+<ul role="menu" class="sub-menu" id="submenu-3790">
+	<li id="menu-item-7823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7823"><a href="https://octo.vmware.com/about/" role="menuitem">About</a></li>
+	<li id="menu-item-9288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9288"><a href="https://www.vmware.com/company/innovation/programs.html" role="menuitem">Innovation Programs</a></li>
+	<li id="menu-item-9290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9290"><a href="https://www.vmware.com/company/sustainability.html" role="menuitem">Sustainability</a></li>
+	<li id="menu-item-9291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9291"><a href="https://www.vmware.com/company/research.html" role="menuitem">Research</a></li>
+	<li id="menu-item-9292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9292"><a href="https://www.vmware.com/opensource.html" role="menuitem">Open Source</a></li>
+</ul>
+</li>
+<li id="menu-item-8204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8204"><a href="https://octo.vmware.com/authors-2/" role="menuitem">Authors</a><div class="gradient-mask"><div class="arrow"></div></div></li>
+<li id="menu-item-7815" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7815"><a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Themes</a><button aria-expanded="false" aria-controls="submenu-7815"><span class="sr-only">Toggle submenu</span></button><div class="gradient-mask"><div class="arrow"></div></div>
+<ul role="menu" class="sub-menu" id="submenu-7815">
+	<li id="menu-item-7818" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7818"><a href="https://octo.vmware.com/data/co-innovation/" role="menuitem">Co-innovation</a></li>
+	<li id="menu-item-7913" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7913"><a href="https://octo.vmware.com/data/customer-voice/" role="menuitem">Customer Voice</a></li>
+	<li id="menu-item-7819" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7819"><a href="https://octo.vmware.com/data/esg/" role="menuitem">Environmental, Social, and Governance</a></li>
+	<li id="menu-item-7816" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7816"><a href="https://octo.vmware.com/data/strategic-advisor/" role="menuitem">Strategic Advisor</a></li>
+	<li id="menu-item-7821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7821"><a href="https://octo.vmware.com/data/tech-deep-dives/" role="menuitem">Tech Deep Dives</a></li>
+	<li id="menu-item-7817" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7817"><a href="https://octo.vmware.com/data/future-of/" role="menuitem">The Future of…</a></li>
+	<li id="menu-item-15824" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15824"><a href="https://octo.vmware.com/data/the-whiteboard/" role="menuitem">The Whiteboard</a></li>
+	<li id="menu-item-14915" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14915"><a href="https://octo.vmware.com/tag/sustainability/" role="menuitem">Sustainability</a></li>
+	<li id="menu-item-15821" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15821"><a href="https://octo.vmware.com/data/ux-design-accessibility/" role="menuitem">UX Design Innovation and Accessibility</a></li>
+	<li id="menu-item-7820" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7820"><a href="https://octo.vmware.com/data/work-culture/" role="menuitem">Work Culture</a></li>
+</ul>
+</li>
+<li id="menu-item-9314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-9314"><a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Tech Topics</a><button aria-expanded="false" aria-controls="submenu-9314"><span class="sr-only">Toggle submenu</span></button><div class="gradient-mask"><div class="arrow"></div></div>
+<ul role="menu" class="sub-menu" id="submenu-9314">
+	<li id="menu-item-13980" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-13980"><a href="https://octo.vmware.com/tag/bigdata/" role="menuitem">Big Data</a></li>
+	<li id="menu-item-9321" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-9321"><a href="https://octo.vmware.com/tag/blockchain/" role="menuitem">Blockchain</a></li>
+	<li id="menu-item-9317" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-has-children menu-item-9317"><a href="https://octo.vmware.com/tag/cloud/" role="menuitem" aria-haspopup="true" aria-expanded="false">Cloud</a><button aria-expanded="false" aria-controls="submenu-9317"><span class="sr-only">Toggle submenu</span></button>
+	<ul role="menu" class="tertiary-menu" id="submenu-9317">
+		<li id="menu-item-14309" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14309"><a href="https://octo.vmware.com/tag/cloud-native/" role="menuitem">Cloud-Native</a></li>
+		<li id="menu-item-14310" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14310"><a href="https://octo.vmware.com/tag/cloud-native-applications/" role="menuitem">Cloud-Native Applications</a></li>
+		<li id="menu-item-14304" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14304"><a href="https://octo.vmware.com/tag/hybrid-cloud/" role="menuitem">Hybrid Cloud</a></li>
+		<li id="menu-item-14303" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14303"><a href="https://octo.vmware.com/tag/multi-cloud/" role="menuitem">Multi-Cloud</a></li>
+	</ul>
+</li>
+	<li id="menu-item-14306" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-has-children menu-item-14306"><a href="https://octo.vmware.com/tag/cryptography/" role="menuitem" aria-haspopup="true" aria-expanded="false">Cryptography</a><button aria-expanded="false" aria-controls="submenu-14306"><span class="sr-only">Toggle submenu</span></button>
+	<ul role="menu" class="tertiary-menu" id="submenu-14306">
+		<li id="menu-item-14305" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14305"><a href="https://octo.vmware.com/tag/crypto-agility/" role="menuitem">Crypto Agility</a></li>
+		<li id="menu-item-14307" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14307"><a href="https://octo.vmware.com/tag/post-quantum-cryptography/" role="menuitem">Post-Quantum Cryptography</a></li>
+	</ul>
+</li>
+	<li id="menu-item-14301" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14301"><a href="https://octo.vmware.com/tag/edge/" role="menuitem">Edge</a></li>
+	<li id="menu-item-9318" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-9318"><a href="https://octo.vmware.com/tag/hpc/" role="menuitem">High Performance Computing</a></li>
+	<li id="menu-item-9327" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-9327"><a href="https://octo.vmware.com/tag/machine-learning/" role="menuitem">Machine Learning</a></li>
+	<li id="menu-item-9331" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-9331"><a href="https://octo.vmware.com/tag/open-source/" role="menuitem">Open Source</a></li>
+	<li id="menu-item-14311" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14311"><a href="https://octo.vmware.com/tag/service-mesh/" role="menuitem">Service Mesh</a></li>
+	<li id="menu-item-9335" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-9335"><a href="https://octo.vmware.com/tag/spatial-computing/" role="menuitem">Spatial Computing</a></li>
+	<li id="menu-item-14302" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-14302"><a href="https://octo.vmware.com/tag/sustainability/" role="menuitem">Sustainability</a></li>
+	<li id="menu-item-15826" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-15826"><a href="https://octo.vmware.com/tag/ux-design-accessibility/" role="menuitem">UX Design and Accessibility</a></li>
+</ul>
+</li>
+<li id="menu-item-14010" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14010"><a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Resources</a><button aria-expanded="false" aria-controls="submenu-14010"><span class="sr-only">Toggle submenu</span></button><div class="gradient-mask"><div class="arrow"></div></div>
+<ul role="menu" class="sub-menu" id="submenu-14010">
+	<li id="menu-item-13579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13579"><a href="https://octo.vmware.com/white-papers/" role="menuitem">OCTO White Papers</a></li>
+	<li id="menu-item-13576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13576"><a href="https://octo.vmware.com/welcome/guides-and-best-practices/" role="menuitem">Guides and Best Practices</a></li>
+	<li id="menu-item-14853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14853"><a target="_blank" href="https://blogs.vmware.com/opensource" role="menuitem">Open Source Blog</a></li>
+	<li id="menu-item-13140" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13140"><a target="_blank" href="https://research.vmware.com/publications" role="menuitem">VMware Research Publications</a></li>
+</ul>
+</li>
+<li id="menu-item-14023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14023"><a href="https://octo.vmware.com/hear-octo-speak/" role="menuitem">Hear OCTO Speak</a><div class="gradient-mask"><div class="arrow"></div></div></li>
+</ul>                    </div>
+                    <div class="gradient-menu-mask"></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                                <ul class="social-links">
+                                        <li class="icon icon-twitter">
+                        <a href="https://twitter.com/vmwocto" target="_twitter" rel="noopener noreferrer">
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                                    </ul>
+                            </div>
+        </div>
+    </div>
+    <div class="gradient-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <div class="gradient-mask"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+    <div class="wrap" role="document">
+      <div class="content">
+        <main>
+          
+<div class="progress" style="display: none;">
+  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+</div>
+  <article class="background-off-white">
+    <div class="container background-white mb-4">
+      <div class="row">
+        <div class="col-12">
+          <header class="post-header">
+    <div class="post-header-inner">
+              <div class="post-featured-image">
+            <img src="Why%20Virtualize%20HPC_files/default-blog-image-576x324.jpeg" alt="Blue glowing high energy plasma field in space, computer generated abstract background" class="img-fluid">
+        </div>
+              <div class="post-headline">
+                            <a href="https://octo.vmware.com/data/uncategorized/" class="category-label">Uncategorized</a>
+                        <h1 class="entry-title">Why Virtualize HPC?</h1>
+            <div class="entry-meta">
+                    <img class="avatar" src="Why%20Virtualize%20HPC_files/Josh-Simons_avatar_1448487085.png" alt="">
+                <div class="author-list">
+                                    <a href="https://octo.vmware.com/author/josh_simons/" rel="author" class="author">Josh Simons</a>
+                            </div>
+                <time class="updated" datetime="2010-08-25" pubdate="">August 25, 2010</time>
+    </div>        </div>
+    </div>
+    <div class="gradient-border"></div>
+</header>        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-lg-2">
+          <aside class="sharing d-none d-md-block">
+    <strong>Share on:</strong>
+    <ul class="social-links">
+        <li class="icon icon-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://octo.vmware.com/why-virtualize-hpc/&amp;text=Why%20Virtualize%20HPC?" target="_blank" rel="noopener noreferrer">
+            <span class="sr-only">Share on Twitter</span>
+        </a>
+        </li>
+        <li class="icon icon-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://octo.vmware.com/why-virtualize-hpc/" target="_blank">
+            <span class="sr-only">Share on LinkedIn</span>
+        </a>
+        </li>
+        <li class="icon icon-fb">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://octo.vmware.com/why-virtualize-hpc/" target="_blank">
+            <span class="sr-only">Share on Facebook</span>
+        </a>
+        </li>
+        <li class="icon icon-mail">
+        <a href="mailto:?subject=Why Virtualize HPC?&amp;body=https://octo.vmware.com/why-virtualize-hpc/" target="_blank">
+            <span class="sr-only">Email this post</span>
+        </a>
+        </li>
+    </ul>
+            <a href="#comments" class="comments">
+            0        </a>
+    </aside>        </div>
+        <div class="col-md-8">
+          <div class="entry-content" data-langdir="">
+            <div>
+<p>My name is Josh Simons.&nbsp; I work for Steve Herrod in the Office 
+of the CTO here at VMware, having joined the company in March of this 
+year from Sun Microsystems. I’m an HPC guy. That’s High Performance 
+Computing, for those not familiar. HPC is all about compute and storage 
+intensive workloads, which are often floating-point heavy, usually 
+technical, very often parallel, and often scientific. But not always.</p>
+<p>While some of the largest computers on the planet are HPC systems, 
+HPC is not all about the high end. There are many companies and other 
+organizations using HPC techniques for business and other advantage in 
+their own areas. According to IDC, many of these are enterprise 
+customers who have realized that they are running an increasing amount 
+of compute-intensive workload in their environments for a variety of 
+reasons.</p>
+<p>I am sometimes asked what someone with over 20 years of experience in
+ HPC is doing at VMware. Why the career change? Actually, I’ve joined 
+VMware to lead a new HPC effort, one based on bringing the value of 
+virtualization to the HPC Community. I spent roughly the last year 
+looking at the strengths and weaknesses of virtualization for HPC and 
+came to the conclusion that vHPC — virtualized HPC — may be uniquely 
+able to address several important pain points for HPC customers while 
+also offering entirely new capabilities that we can leverage to great 
+advantage for HPC.</p>
+<p>I’d like to use this space within the Office of the CTO community 
+page to explore the above topic in more detail through a series of 
+pieces that I hope will attract some commentary and discussion. While I 
+am enthusiastic about the potentials of vHPC, you will not find fanboi 
+giddiness here. I’m quite aware of both the benefits and the 
+considerable challenges of delivering a vHPC vision and intend to 
+present a balanced view by covering all aspects.</p>
+<p>Back in June I was in Hamburg, Germany at the 25th annual 
+International Supercomputing Conference (ISC ’10) where I ran a 
+Birds-of-a-Feather session titled Virtualization and HPC that was very 
+well attended. The talk outlined some of the major potential uses of 
+virtualization for HPC and touched on some performance-related topics as
+ well. As this is very appropriate material for this introductory piece,
+ I’ve reproduced much of what I covered below. Readers already familiar 
+with the basics of virtualization and its capabilities can skip to the 
+second section.</p>
+<p><strong>Virtualization Basics</strong></p>
+<p>Since some readers may not be very familiar with virtualization, I’d 
+like to first define what we mean by the term and also briefly discuss 
+how virtualization is used in an enterprise setting. With this context 
+we can then look at the uses of virtualization for HPC in more detail.<a href="http://communities.vmware.com/static/images/cto-office/1_1.png"><img class="alignleft" src="Why%20Virtualize%20HPC_files/1_1.html" alt="" align="left"></a></p>
+<p>OS virtualization (Fig 1) involves two basic concepts: the insertion 
+of a virtualization layer that manages the physical resources of a 
+server and the encapsulation of an operating system and its applications
+ in a container called a virtual machine. Once this encapsulation is 
+done it is then possible to run multiple virtual machines on a single 
+physical system with access to underlying resources controlled by the 
+virtualization layer. Many readers will be familiar with desktop 
+virtualization through the use of VMware Fusion, Parallels Desktop, or 
+Oracle VM VirtualBox. With such products, one’s guest operating system 
+runs within a virtual machine on a host operating system — for example, 
+Windows XP running in VMware Fusion on Mac OS X. While the principles 
+are similar, in the server virtualization case there is not a host 
+operating system running under the virtual machine, but rather a thin 
+and highly optimized piece of software called a hypervisor. As we will 
+discuss later, the nature of the interface between the hypervisor and 
+the virtual machine is important for both enterprise and HPC uses of 
+virtualization.</p>
+<p>&nbsp;</p>
+<p>Within the enterprise, virtualization is primarily used to reduce the
+ number of physical servers needed in a datacenter by consolidating 
+workload from multiple systems onto a smaller number of servers. <a href="http://communities.vmware.com/static/images/cto-office/1_2.png"><img loading="lazy" style="margin-right:10px;margin-bottom:10px" src="Why%20Virtualize%20HPC_files/1_2.html" alt="" width="218" height="230" align="left"></a>Depending
+ on the nature of the workload being consolidated and the hardware 
+available it may be possible to run 10s or more virtual machines per 
+physical server. While this massive over-subscription of resources can 
+work well in the enterprise due to the relatively low resource 
+requirements of many enterprise applications, HPC applications need 
+dedicated compute resources to achieve high performance. However, as 
+chip vendors continue to aggressively increase the number of processor 
+cores per socket some degree of consolidation will be required for HPC 
+workloads that are not able to take advantage of the degree of 
+parallelism available on even single-socket systems. This will be 
+especially true for organizations with throughput-oriented workloads 
+like Life Sciences, EDA, DCC, Energy, and Financial Services. In such 
+cases, the degree of consolidation used will match the total number of 
+virtual CPUs instantiate across all virtual machines with the total 
+number of real CPUs in the underlying physical system to avoid 
+over-subscription and deliver high performance to each virtual machine.</p>
+<p>Two additional virtualization capabilities should be mentioned before
+ we turn to a discussion of HPC use cases. The first is snapshots and 
+the second is live workload migration. Both of these capabilities are 
+enabled by the clean, well-defined nature of the interface that exists 
+between the hypervisor and virtual machine.<a href="http://communities.vmware.com/static/images/cto-office/1_3.png"><img loading="lazy" style="margin-right:10px;margin-bottom:10px" src="Why%20Virtualize%20HPC_files/1_3.html" alt="" width="329" height="293" align="left"></a></p>
+<p>Virtual machines can be suspended, written to disk, and then 
+restarted later as anyone who has used desktop virtualization products 
+is aware. This snapshot capability can add significant flexibility in an
+ enterprise environment, allowing applications and services to be scaled
+ up and down as needed.</p>
+<p>Live workload migration – or VMotion as we call it at VMware – is 
+perhaps one of the slickest virtualization technologies. With VMotion 
+one can migrate running virtual machines (and their running 
+applications) from one physical machine to another. The virtual machine 
+continues to run as the memory footprint of the virtual machine is paged
+ from source machine to destination machine in multiple rounds. When the
+ vast majority of the memory has been transferred, the virtual machine 
+is paused very briefly while the remainder of its working set is 
+transferred to the destination machine and then the virtual machine 
+continues execution on the new hardware. This capability is used in the 
+enterprise in a variety of ways including dynamic balancing of workload 
+between machines, power management, and system maintenance.</p>
+<h3>Virtualization and HPC</h3>
+<p>Let’s turn now to how virtualization can be used to both address 
+significant pain points in current HPC environments and to add new 
+capabilities not available without virtualization.&nbsp; We will then 
+discuss the performance of HPC applications on a virtualized 
+infrastructure.</p>
+<div>
+<p><a href="http://communities.vmware.com/static/images/cto-office/1_7.png"><img loading="lazy" class="alignleft" style="margin-right:10px;margin-bottom:10px" src="Why%20Virtualize%20HPC_files/1_7.html" alt="" width="306" height="137" align="left"></a><strong>Cloud Computing</strong></p>
+</div>
+<p>Virtualization is the on-ramp to cloud computing – it enables access 
+to potentially large amounts of computational power without the capital 
+expenditures traditionally required to run large-scale computations. 
+Thus, a desire to exploit cloud computing resources is perhaps one of 
+the most common reasons members of the HPC community are beginning to 
+express interest in virtualization technologies. While accessing remote 
+compute resources has been a common HPC model for many years, the use of
+ virtualization on those resources is a new aspect which requires a 
+better understanding of both the costs and values of virtualization for 
+compute-intensive workloads.</p>
+<p><strong>Heterogeneity</strong></p>
+<p>Current HPC clusters are for the most part homogeneous masses of 
+compute nodes all running an identical version of a pre-selected 
+operating system. <a href="http://communities.vmware.com/static/images/cto-office/1_4.png"><img loading="lazy" style="margin-right:10px;margin-bottom:10px" src="Why%20Virtualize%20HPC_files/1_4.html" alt="" width="182" height="226" align="left"></a>
+ While this uniformity greatly reduces administrative complexity and 
+allows supported applications to be scheduled to any node, it is also 
+extremely inflexible. Consider, for example, a large HPC installation 
+designed to serve a wide user base with potentially disparate 
+application requirements. These applications may require Windows, 
+Solaris, or an older version of Linux than is installed on the cluster. 
+Since temporarily re-provisioning, rebooting, and reconfiguring nodes to
+ satisfy these user requirements is not feasible, these users are unable
+ to use the shared resource for their work, forcing them to either look 
+elsewhere for appropriate resources or to port their application to the 
+site’s supported operating system. Virtualization technology can greatly
+ improve this situation.</p>
+<p>By deploying a virtualized infrastructure across all compute nodes 
+rather than installing a standard operating system, administrators now 
+free users to run virtual machines on the shared resource. <a href="http://communities.vmware.com/static/images/cto-office/1_5.png"><img loading="lazy" style="margin-right:10px;margin-bottom:10px" src="Why%20Virtualize%20HPC_files/1_5.html" alt="" width="221" height="239" align="left"></a>
+ Because the virtual machine is a black box from the site 
+administrator’s perspective, users are free to run any operating system 
+with any HPC software stack they desire to support their work. Old 
+operating system revisions, completely different operating systems, old 
+MPI libraries, experimental MPI libraries-users are completely free to 
+make any such choices when building and configuring their virtual 
+machines for later deployment on the shared cluster resource.</p>
+<p>Of course, a site may also elect to supply a standard virtual machine
+ with a standard operating system and software stack for those end users
+ who do not require this additional degree of flexibility, thus 
+supporting existing users while also adding the ability to address the 
+requirements of a much broader user base.</p>
+<p><strong>Clean Computing</strong></p>
+<p>This shift from a physical to virtual cluster infrastructure has 
+other benefits as well. There are several in particular that I 
+collectively refer to as clean computing, which address several existing
+ HPC pain points related to the current practice of running multiple 
+applications on nodes in a shared cluster resource.</p>
+<p>Current physical compute clusters use standard HPC distributed 
+resource managers like Oracle Grid Engine or Platform LSF to schedule 
+jobs onto nodes. This can work well when no problems occur, but in 
+situations in which jobs abort and leave the system in a corrupted state
+ (e.g. /tmp has filled or an aborted job has not shut down properly and 
+is holding a critical resource,) workload throughput can be greatly 
+reduced as further jobs are scheduled onto these broken systems. System 
+administrators spend significant time crafting homegrown approaches for 
+dealing with these problems, including periodic node reboots to reset 
+the node to a known good state. This problem does not exist in a 
+virtualized cluster because when virtual machines are launched on a node
+ they start in a well-defined and pristine state and cannot be affected 
+by the previous job that ran on the node. Similarly, when launching an 
+MPI job using virtual machines to encapsulate the job’s MPI processes, 
+all ranks are guaranteed to start in a consistent state.</p>
+<p>Security is another aspect of clean computing. As was mentioned 
+earlier, non-oversubscribed consolidation – running a set of virtual 
+machines whose total virtual CPU count does not exceed the total number 
+of physical cores in a server – is an important use case for some HPC 
+customer workloads due to the rapidly increasing number of cores 
+available per socket. Virtualization allows multiple jobs to be run on 
+the same physical hardware and provides a security barrier to prevent 
+information leakage between jobs or users. This is especially important 
+in shared environments in which multiple populations must be separated; 
+for example, two departments within a company or academic and industrial
+ users on a shared university resource.</p>
+<p><strong>Developer</strong></p>
+<p>Virtualization can be used by developers in some interesting ways as 
+well. For any developer, the ability to use snapshots to more quickly 
+debug programs by checkpointing the virtual machine and its application 
+just prior to a failure allows the programmer to quickly and repeatedly 
+trigger the failure and therefore debug the problem more efficiently.</p>
+<p>For teams doing distributed development, virtualization can be used 
+to guarantee that all developers are working in identically configured 
+environments, which would go well beyond the benefits of a centralized 
+code repository and version management system. I don’t know of anyone 
+using virtualization in this way, but it would be interesting area to 
+explore.</p>
+<div>
+<p><a href="http://communities.vmware.com/static/images/cto-office/1_6.png"><img loading="lazy" class="alignleft" style="margin-right:10px;margin-bottom:10px" src="Why%20Virtualize%20HPC_files/1_6.html" alt="" width="218" height="222" align="left"></a>From
+ an HPC-specific perspective virtualization can be used with “reverse 
+consolidation” to debug high-scaling applications as they are developed.
+ For example, the correctness of a new MPI application can be explored 
+on a modest sized test cluster prior to running the full-scale job on an
+ large, expensive, shared resource by running a very large number of 
+virtual machines on each node of the test cluster to simulate a 
+full-scale application run. While clearly performance aspects could not 
+be tested, the placement of MPI processes within their own virtual 
+machine and operating system instances would allow correctness testing 
+in an environment that more closely mimics the production environment 
+than other physically-based approaches.</p>
+</div>
+<p><strong>End of Part I</strong></p>
+<p>Because this piece has become quite long, I’ve decided to break it 
+into two parts. The second installment will cover the remainder of the 
+primary use-cases for virtualization in HPC (checkpointing and dynamic 
+resource utilization) and will also touch on some 
+performance-related&nbsp; issues, which I know are of paramount concern 
+to HPC users. Stay tuned for Part II!</p>
+</div>          </div>
+          <footer class="entry-footer">
+                    <div class="author-footer">
+              <div class="author-avatar">
+                  <a href="https://octo.vmware.com/author/josh_simons/">
+                    <img src="Why%20Virtualize%20HPC_files/Josh-Simons_avatar_1448487085.png" class="rounded-circle img-fluid" alt="">
+                  </a>
+              </div>
+              <div class="author-details">
+                  <h4><a href="https://octo.vmware.com/author/josh_simons/">Josh Simons</a></h4>
+                  <p>With over 20 years of experience in High 
+Performance Computing, Josh currently leads an effort within VMware's 
+Office of the CTO to bring the full value of virtualization to HPC.…</p>
+                                </div>
+            </div>
+                    </footer>
+        </div>
+      </div>
+    </div>
+      <div class="container background-white pl-4 pr-4">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mt-4 mb-3">Related Articles</h2>
+      </div>
+    </div>
+    <div class="row">
+       
+        <div class="col-12 col-md-4 stacked-posts">
+        
+<article class="card post-698 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-hpc tag-performance tag-virtualization tag-vmware">
+  <div class="image-wrap">
+          <a href="https://octo.vmware.com/14844-2/" title="">
+        <picture>
+          <source media="(max-width: 768px)" srcset="Why%20Virtualize%20HPC_files/default-blog-image-576x324.jpeg 1x">
+          <source media="(max-width: 992px)" srcset="Why%20Virtualize%20HPC_files/default-blog-image-752x423.jpeg 1x">
+          <img src="Why%20Virtualize%20HPC_files/default-blog-image-576x324.jpeg" alt="Blue glowing high energy plasma field in space, computer generated abstract background" class="">
+        </picture>
+      </a>
+      </div>
+  <div class="content-wrap">
+    <div class="content-inner">
+                        <a href="https://octo.vmware.com/data/uncategorized/" class="category-label">Uncategorized</a>
+                    <h2 class="title"><a href="https://octo.vmware.com/14844-2/"></a></h2>
+            <div class="entry-meta">
+                    <img class="avatar" src="Why%20Virtualize%20HPC_files/Brianna-Blacet_avatar_1608601111-30x30.png" alt="">
+                <div class="author-list">
+                                    <a href="https://octo.vmware.com/author/bblacet/" rel="author" class="author">Brianna Blacet</a>
+                            </div>
+                <time class="updated" datetime="2021-10-22" pubdate="">October 22, 2021</time>
+    </div>    </div>
+  </div>
+</article>
+        </div>
+       
+        <div class="col-12 col-md-4 stacked-posts">
+        
+<article class="card post-698 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-hpc tag-performance tag-virtualization tag-vmware">
+  <div class="image-wrap">
+          <a href="https://octo.vmware.com/multi-cloud-strategy-or-inevitable-outcome-or-both/" title="Multi-Cloud: Strategy or Inevitable Outcome? (Or Both?)">
+        <picture>
+          <source media="(max-width: 768px)" srcset="Why%20Virtualize%20HPC_files/multi-cloud-image-for-Kit-blog-2-1-2021-1-scaled-1-576x324.jpeg 1x">
+          <source media="(max-width: 992px)" srcset="Why%20Virtualize%20HPC_files/multi-cloud-image-for-Kit-blog-2-1-2021-1-scaled-1-752x423.jpeg 1x">
+          <img src="Why%20Virtualize%20HPC_files/multi-cloud-image-for-Kit-blog-2-1-2021-1-scaled-1-576x324.jpeg" alt="CREATOR: gd-jpeg v1.0 (using IJG JPEG v62), quality = 82" class="">
+        </picture>
+      </a>
+      </div>
+  <div class="content-wrap">
+    <div class="content-inner">
+                        <a href="https://octo.vmware.com/data/strategic-advisor/" class="category-label">Strategic Advisor</a>
+                    <h2 class="title"><a href="https://octo.vmware.com/multi-cloud-strategy-or-inevitable-outcome-or-both/">Multi-Cloud: Strategy or Inevitable Outcome? (Or Both?)</a></h2>
+            <div class="entry-meta">
+                    <img class="avatar" src="Why%20Virtualize%20HPC_files/Kit-Colbert_avatar_1659985665-30x30.jpg" alt="">
+                <div class="author-list">
+                                    <a href="https://octo.vmware.com/author/kit_colbert/" rel="author" class="author">Kit Colbert</a>
+                            </div>
+                <time class="updated" datetime="2021-02-01" pubdate="">February 1, 2021</time>
+    </div>    </div>
+  </div>
+</article>
+        </div>
+       
+        <div class="col-12 col-md-4 stacked-posts">
+        
+<article class="card post-698 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-hpc tag-performance tag-virtualization tag-vmware">
+  <div class="image-wrap image-too-short image-too-narrow">
+          <a href="https://octo.vmware.com/virtualizing-low-latency-trading-platforms-vmware-vsphere/" title="Virtualizing Low-Latency Trading Platforms with VMware vSphere">
+        <picture>
+          <source media="(max-width: 768px)" srcset="Why%20Virtualize%20HPC_files/Virtualizing-Low-Latency-Trading-Platforms-with-VMware-vSph.jpeg 1x">
+          <source media="(max-width: 992px)" srcset="Why%20Virtualize%20HPC_files/Virtualizing-Low-Latency-Trading-Platforms-with-VMware-vSph.jpeg 1x">
+          <img src="Why%20Virtualize%20HPC_files/Virtualizing-Low-Latency-Trading-Platforms-with-VMware-vSph.jpeg" alt="Shot of Asian IT Specialist Using Laptop in Data Center Full of Rack Servers. Concept of High Speed Internet with Blue Neon Visualization Projection of Binary Data Transfer" class="">
+        </picture>
+      </a>
+      </div>
+  <div class="content-wrap">
+    <div class="content-inner">
+                        <a href="https://octo.vmware.com/data/tech-deep-dives/" class="category-label">Tech Deep Dives</a>
+                    <h2 class="title"><a href="https://octo.vmware.com/virtualizing-low-latency-trading-platforms-vmware-vsphere/">Virtualizing Low-Latency Trading Platforms with VMware vSphere</a></h2>
+            <div class="entry-meta">
+                    <img class="avatar" src="Why%20Virtualize%20HPC_files/Josh-Simons_avatar_1448487085.png" alt="">
+                <div class="author-list">
+                                    <a href="https://octo.vmware.com/author/josh_simons/" rel="author" class="author">Josh Simons</a>
+                            </div>
+                <time class="updated" datetime="2020-12-11" pubdate="">December 11, 2020</time>
+    </div>    </div>
+  </div>
+</article>
+        </div>
+       
+        <div class="col-12 col-md-4 stacked-posts">
+        
+<article class="card post-698 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-hpc tag-performance tag-virtualization tag-vmware">
+  <div class="image-wrap image-too-short image-too-narrow">
+          <a href="https://octo.vmware.com/ai-ml-vmworld-2020/" title="Your Guide to AI/ML Content at VMworld 2020">
+        <picture>
+          <source media="(max-width: 768px)" srcset="Why%20Virtualize%20HPC_files/VMworld2020-ML-hero.jpg 1x">
+          <source media="(max-width: 992px)" srcset="Why%20Virtualize%20HPC_files/VMworld2020-ML-hero.jpg 1x">
+          <img src="Why%20Virtualize%20HPC_files/VMworld2020-ML-hero.jpg" alt="" class="">
+        </picture>
+      </a>
+      </div>
+  <div class="content-wrap">
+    <div class="content-inner">
+                        <a href="https://octo.vmware.com/data/future-of/" class="category-label">The Future of...</a>
+                    <h2 class="title"><a href="https://octo.vmware.com/ai-ml-vmworld-2020/">Your Guide to AI/ML Content at VMworld 2020</a></h2>
+            <div class="entry-meta">
+                    <img class="avatar" src="Why%20Virtualize%20HPC_files/Josh-Simons_avatar_1448487085.png" alt="">
+                <div class="author-list">
+                                    <a href="https://octo.vmware.com/author/josh_simons/" rel="author" class="author">Josh Simons</a>
+                            </div>
+                <time class="updated" datetime="2020-09-22" pubdate="">September 22, 2020</time>
+    </div>    </div>
+  </div>
+</article>
+        </div>
+          </div>
+  </div>
+    
+<section id="comments" class="comments background-off-white mt-4">
+  <div class="container background-white">
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2">
+        <h2>Comments</h2>
+        
+        
+        	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://octo.vmware.com/why-virtualize-hpc/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://octo.vmware.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message" aria-hidden="true">Required fields are marked <span class="required" aria-hidden="true">*</span></span></p><div class="comment-form-comment"><label for="comment" class="sr-only">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></div><div class="form-wrap"><div class="form-left">
+            <div class="comment-form-author">
+            <label for="author" class="sr-only">Name</label>
+            <input id="author" placeholder="Name*" name="author" type="text" size="30" maxlength="245" required="required" data-ddg-inputtype="identities.fullName"></div>
+<div class="comment-form-email">
+            <label for="email" class="sr-only">Email</label>
+            <input id="email" name="email" type="email" size="30" placeholder="Email*" maxlength="100" aria-describedby="email-notes" required="required" data-ddg-inputtype="identities.emailAddress" data-ddg-autofill="true" style="background-size: auto 26px !important; background-position: right center !important; background-repeat: no-repeat !important; background-origin: content-box !important; background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgNDQgNDQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGxpbmVhckdyYWRpZW50IGlkPSJhIj48c3RvcCBvZmZzZXQ9Ii4wMSIgc3RvcC1jb2xvcj0iIzYxNzZiOSIvPjxzdG9wIG9mZnNldD0iLjY5IiBzdG9wLWNvbG9yPSIjMzk0YTlmIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTMuOTI5NyIgeDI9IjE3LjA3MiIgeGxpbms6aHJlZj0iI2EiIHkxPSIxNi4zOTgiIHkyPSIxNi4zOTgiLz48bGluZWFyR3JhZGllbnQgaWQ9ImMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMjMuODExNSIgeDI9IjI2LjY3NTIiIHhsaW5rOmhyZWY9IiNhIiB5MT0iMTQuOTY3OSIgeTI9IjE0Ljk2NzkiLz48bWFzayBpZD0iZCIgaGVpZ2h0PSI0MCIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjQwIiB4PSIyIiB5PSIyIj48cGF0aCBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Im0yMi4wMDAzIDQxLjA2NjljMTAuNTMwMiAwIDE5LjA2NjYtOC41MzY0IDE5LjA2NjYtMTkuMDY2NiAwLTEwLjUzMDMtOC41MzY0LTE5LjA2NjcxLTE5LjA2NjYtMTkuMDY2NzEtMTAuNTMwMyAwLTE5LjA2NjcxIDguNTM2NDEtMTkuMDY2NzEgMTkuMDY2NzEgMCAxMC41MzAyIDguNTM2NDEgMTkuMDY2NiAxOS4wNjY3MSAxOS4wNjY2eiIgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9tYXNrPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTIyIDQ0YzEyLjE1MDMgMCAyMi05Ljg0OTcgMjItMjIgMC0xMi4xNTAyNi05Ljg0OTctMjItMjItMjItMTIuMTUwMjYgMC0yMiA5Ljg0OTc0LTIyIDIyIDAgMTIuMTUwMyA5Ljg0OTc0IDIyIDIyIDIyeiIgZmlsbD0iI2RlNTgzMyIgZmlsbC1ydWxlPSJldmVub2RkIi8+PGcgbWFzaz0idXJsKCNkKSI+PHBhdGggY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMjYuMDgxMyA0MS42Mzg2Yy0uOTIwMy0xLjc4OTMtMS44MDAzLTMuNDM1Ni0yLjM0NjYtNC41MjQ2LTEuNDUyLTIuOTA3Ny0yLjkxMTQtNy4wMDctMi4yNDc3LTkuNjUwNy4xMjEtLjQ4MDMtMS4zNjc3LTE3Ljc4Njk5LTIuNDItMTguMzQ0MzItMS4xNjk3LS42MjMzMy0zLjcxMDctMS40NDQ2Ny01LjAyNy0xLjY2NDY3LS45MTY3LS4xNDY2Ni0xLjEyNTcuMTEtMS41MTA3LjE2ODY3LjM2My4wMzY2NyAyLjA5Ljg4NzMzIDIuNDIzNy45MzUtLjMzMzcuMjI3MzMtMS4zMi0uMDA3MzMtMS45NTA3LjI3MTMzLS4zMTkuMTQ2NjctLjU1NzMuNjg5MzQtLjU1Ljk0NiAxLjc5NjctLjE4MzMzIDQuNjA1NC0uMDAzNjYgNi4yNy43MzMyOS0xLjMyMzYuMTUwNC0zLjMzMy4zMTktNC4xOTgzLjc3MzctMi41MDggMS4zMi0zLjYxNTMgNC40MTEtMi45NTUzIDguMTE0My42NTYzIDMuNjk2IDMuNTY0IDE3LjE3ODQgNC40OTE2IDIxLjY4MS45MjQgNC40OTkgMTEuNTUzNyAzLjU1NjcgMTAuMDE3NC41NjF6IiBmaWxsPSIjZDVkN2Q4IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBkPSJtMjIuMjg2NSAyNi44NDM5Yy0uNjYgMi42NDM2Ljc5MiA2LjczOTMgMi4yNDc2IDkuNjUwNi40ODkxLjk3MjcgMS4yNDM4IDIuMzkyMSAyLjA1NTggMy45NjM3LTEuODk0LjQ2OTMtNi40ODk1IDEuMTI2NC05LjcxOTEgMC0uOTI0LTQuNDkxNy0zLjgzMTctMTcuOTc3Ny00LjQ5NTMtMjEuNjgxLS42Ni0zLjcwMzMgMC02LjM0NyAyLjUxNTMtNy42NjcuODYxNy0uNDU0NyAyLjA5MzctLjc4NDcgMy40MTM3LS45MzEzLTEuNjY0Ny0uNzQwNy0zLjYzNzQtMS4wMjY3LTUuNDQxNC0uODQzMzYtLjAwNzMtLjc2MjY3IDEuMzM4NC0uNzE4NjcgMS44NDQ0LTEuMDYzMzQtLjMzMzctLjA0NzY2LTEuMTYyNC0uNzk1NjYtMS41MjktLjgzMjMzIDIuMjg4My0uMzkyNDQgNC42NDIzLS4wMjEzOCA2LjY5OSAxLjA1NiAxLjA0ODYuNTYxIDEuNzg5MyAxLjE2MjMzIDIuMjQ3NiAxLjc5MzAzIDEuMTk1NC4yMjczIDIuMjUxNC42NiAyLjk0MDcgMS4zNDkzIDIuMTE5MyAyLjExNTcgNC4wMTEzIDYuOTUyIDMuMjE5MyA5LjczMTMtLjIyMzYuNzctLjczMzMgMS4zMzEtMS4zNzEzIDEuNzk2Ny0xLjIzOTMuOTAyLTEuMDE5My0xLjA0NS00LjEwMy45NzE3LS4zOTk3LjI2MDMtLjM5OTcgMi4yMjU2LS41MjQzIDIuNzA2eiIgZmlsbD0iI2ZmZiIvPjwvZz48ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0ibTE2LjY3MjQgMjAuMzU0Yy43Njc1IDAgMS4zODk2LS42MjIxIDEuMzg5Ni0xLjM4OTZzLS42MjIxLTEuMzg5Ny0xLjM4OTYtMS4zODk3LTEuMzg5Ny42MjIyLTEuMzg5NyAxLjM4OTcuNjIyMiAxLjM4OTYgMS4zODk3IDEuMzg5NnoiIGZpbGw9IiMyZDRmOGUiLz48cGF0aCBkPSJtMTcuMjkyNCAxOC44NjE3Yy4xOTg1IDAgLjM1OTQtLjE2MDguMzU5NC0uMzU5M3MtLjE2MDktLjM1OTMtLjM1OTQtLjM1OTNjLS4xOTg0IDAtLjM1OTMuMTYwOC0uMzU5My4zNTkzcy4xNjA5LjM1OTMuMzU5My4zNTkzeiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Im0yNS45NTY4IDE5LjMzMTFjLjY1ODEgMCAxLjE5MTctLjUzMzUgMS4xOTE3LTEuMTkxNyAwLS42NTgxLS41MzM2LTEuMTkxNi0xLjE5MTctMS4xOTE2cy0xLjE5MTcuNTMzNS0xLjE5MTcgMS4xOTE2YzAgLjY1ODIuNTMzNiAxLjE5MTcgMS4xOTE3IDEuMTkxN3oiIGZpbGw9IiMyZDRmOGUiLz48cGF0aCBkPSJtMjYuNDg4MiAxOC4wNTExYy4xNzAxIDAgLjMwOC0uMTM3OS4zMDgtLjMwOHMtLjEzNzktLjMwOC0uMzA4LS4zMDgtLjMwOC4xMzc5LS4zMDguMzA4LjEzNzkuMzA4LjMwOC4zMDh6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0ibTE3LjA3MiAxNC45NDJzLTEuMDQ4Ni0uNDc2Ni0yLjA2NDMuMTY1Yy0xLjAxNTcuNjM4LS45NzkgMS4yOTA3LS45NzkgMS4yOTA3cy0uNTM5LTEuMjAyNy44OTgzLTEuNzkzYzEuNDQxLS41ODY3IDIuMTQ1LjMzNzMgMi4xNDUuMzM3M3oiIGZpbGw9InVybCgjYikiLz48cGF0aCBkPSJtMjYuNjc1MiAxNC44NDY3cy0uNzUxNy0uNDI5LTEuMzM4My0uNDIxN2MtMS4xOTkuMDE0Ny0xLjUyNTQuNTQyNy0xLjUyNTQuNTQyN3MuMjAxNy0xLjI2MTQgMS43MzQ0LTEuMDA4NGMuNDk5Ny4wOTE0LjkyMjMuNDIzNCAxLjEyOTMuODg3NHoiIGZpbGw9InVybCgjYykiLz48cGF0aCBkPSJtMjAuOTI1OCAyNC4zMjFjLjEzOTMtLjg0MzMgMi4zMS0yLjQzMSAzLjg1LTIuNTMgMS41NC0uMDk1MyAyLjAxNjctLjA3MzMgMy4zLS4zODEzIDEuMjg3LS4zMDQzIDQuNTk4LTEuMTI5MyA1LjUxMS0xLjU1NDcuOTE2Ny0uNDIxNiA0LjgwMzMuMjA5IDIuMDY0MyAxLjczOC0xLjE4NDMuNjYzNy00LjM3OCAxLjg4MS02LjY2MjMgMi41NjMtMi4yODA3LjY4Mi0zLjY2My0uNjUyNi00LjQyMi40Njk0LS42MDEzLjg5MS0uMTIxIDIuMTEyIDIuNjAzMyAyLjM2NSAzLjY4MTQuMzQxIDcuMjA4Ny0xLjY1NzQgNy41OTc0LS41OTQuMzg4NiAxLjA2MzMtMy4xNjA3IDIuMzgzMy01LjMyNCAyLjQyNzMtMi4xNjM0LjA0MDMtNi41MTk0LTEuNDMtNy4xNzItMS44ODQ3LS42NTY0LS40NTEtMS41MjU0LTEuNTE0My0xLjM0NTctMi42MTh6IiBmaWxsPSIjZmRkMjBhIi8+PHBhdGggZD0ibTI4Ljg4MjUgMzEuODM4NmMtLjc3NzMtLjE3MjQtNC4zMTIgMi41MDA2LTQuMzEyIDIuNTAwNmguMDAzN2wtLjE2NSAyLjA1MzRzNC4wNDA2IDEuNjUzNiA0LjczIDEuMzk3Yy42ODkzLS4yNjQuNTE3LTUuNzc1LS4yNTY3LTUuOTUxem0tMTEuNTQ2MyAxLjAzNGMuMDg0My0xLjExODQgNS4yNTQzIDEuNjQyNiA1LjI1NDMgMS42NDI2bC4wMDM3LS4wMDM2LjI1NjYgMi4xNTZzLTQuMzA4MyAyLjU4MTMtNC45MTMzIDIuMjM2NmMtLjYwMTMtLjM0NDYtLjY4OTMtNC45MDk2LS42MDEzLTYuMDMxNnoiIGZpbGw9IiM2NWJjNDYiLz48cGF0aCBkPSJtMjEuMzQgMzQuODA0OWMwIDEuODA3Ny0uMjYwNCAyLjU4NS41MTMzIDIuNzU3NC43NzczLjE3MjMgMi4yNDAzIDAgMi43NjEtLjM0NDcuNTEzMy0uMzQ0Ny4wODQzLTIuNjY5My0uMDg4LTMuMTAycy0zLjE5LS4wODgtMy4xOS42ODkzeiIgZmlsbD0iIzQzYTI0NCIvPjxwYXRoIGQ9Im0yMS42NzAxIDM0LjQwNTFjMCAxLjgwNzYtLjI2MDQgMi41ODEzLjUxMzMgMi43NTM2Ljc3MzcuMTc2IDIuMjM2NyAwIDIuNzU3My0uMzQ0Ni41MTctLjM0NDcuMDg4LTIuNjY5NC0uMDg0My0zLjEwMi0uMTcyMy0uNDMyNy0zLjE5LS4wODQ0LTMuMTkuNjg5M3oiIGZpbGw9IiM2NWJjNDYiLz48cGF0aCBkPSJtMjIuMDAwMiA0MC40NDgxYzEwLjE4ODUgMCAxOC40NDc5LTguMjU5NCAxOC40NDc5LTE4LjQ0NzlzLTguMjU5NC0xOC40NDc5NS0xOC40NDc5LTE4LjQ0Nzk1LTE4LjQ0Nzk1IDguMjU5NDUtMTguNDQ3OTUgMTguNDQ3OTUgOC4yNTk0NSAxOC40NDc5IDE4LjQ0Nzk1IDE4LjQ0Nzl6bTAgMS43MTg3YzExLjEzNzcgMCAyMC4xNjY2LTkuMDI4OSAyMC4xNjY2LTIwLjE2NjYgMC0xMS4xMzc4LTkuMDI4OS0yMC4xNjY3LTIwLjE2NjYtMjAuMTY2Ny0xMS4xMzc4IDAtMjAuMTY2NyA5LjAyODktMjAuMTY2NyAyMC4xNjY3IDAgMTEuMTM3NyA5LjAyODkgMjAuMTY2NiAyMC4xNjY3IDIwLjE2NjZ6IiBmaWxsPSIjZmZmIi8+PC9nPjwvc3ZnPg==&quot;) !important; transition: background 0s ease 0s !important;"></div>
+<div class="comment-form-url">
+            <label for="url" class="sr-only">Website</label>
+            <input id="url" name="url" type="url" size="30" placeholder="Website" maxlength="200" data-ddg-inputtype="unknown"></div></div>
+<div class="form-right"><div class="comment-form-cookies-consent">
+            <label for="wp-comment-cookies-consent">
+            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"><span>
+            Save my name, email, and website in this browser for the next time I comment</span></label></div></div></div>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="698" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="47e3c25c52"></p><p style="display: none;"></p><input type="hidden" id="ak_js" name="ak_js" value="1663751702468"></form>	</div><!-- #respond -->
+	      </div>
+    </div>
+  </div>
+</section>
+  </article>
+                </main><!-- /.main -->
+      </div><!-- /.content -->
+    </div><!-- /.wrap -->
+    <footer class="content-info">
+  <div id="page-footer"><section class="footer-component footer-container ">   <div class="personalization_div_1" style="min-height: 1px;"></div>   <div class="personalization_div_2" style="min-height: 1px;"></div>   <div class="container ">      <div class="content">         <div class="row">            <div class="col-lg-12 col-md-12">               <footer class="footer">                    <div class="row">                      <div class="col-lg-2 col-md-12 mb-40 mt-3">                                          <a class="footer-vmware-logo" href="https://www.vmware.com/" name="nav_footer : VMware Logo">                     <picture class="float-lg-left">                           <source media="(max-width:800px)" srcset="Why%20Virtualize%20HPC_files/vmware-logo-grey_002.svg 1x">                           <img loading="lazy" class="vmware-logo" src="Why%20Virtualize%20HPC_files/vmware-logo-grey.svg" alt="VMware" title="VMware" width="140" height="22">                        </picture>                     </a>                                             </div>                       <div class="col-lg-10 col-md-12">                        <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">        <div class="custom-container-config aem-GridColumn aem-GridColumn--default--12"> <input type="hidden" value="column-gap-auto" class="column-gap"><input type="hidden" value="column-height-auto" class="column-height"><div class="row   ">   <div class="col-md-12 px-0">      <section class="column-cards">         <div class="container">            <div class="content ">               <div class="row container-comp-wrapper">                                                                                             <div class="col-md-6 col-lg-3 mt-3 cont-columns  ">                        <div><div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">        <div class="linksContainer aem-GridColumn aem-GridColumn--default--12">    <div class="submenu-container">      <p class="mb-20 text-black text-s">                                           Company                   </p>          <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">        <div class="links aem-GridColumn aem-GridColumn--default--12">    <div class="mb-40 ">    <div class="submenu-links-footer">
+                                                                        
+                                                            <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/company.html" title="About Us" aria-label="About Us" name="nav_footer_company : About Us">                    About Us                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/company/leadership.html" title="Executive Leadership" aria-label="Executive Leadership" name="nav_footer_company : Executive Leadership">                    Executive Leadership                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://news.vmware.com/" title="News &amp; Stories" aria-label="News &amp; Stories" name="nav_footer_company : News &amp; Stories">                    News &amp; Stories                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://ir.vmware.com/" title="Investor Relations" aria-label="Investor Relations" name="nav_footer_company : Investor Relations">                    Investor Relations                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/company/customers.html" title="Customer Stories" aria-label="Customer Stories" name="nav_footer_company : Customer Stories">                    Customer Stories                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/company/diversity.html" title="Diversity, Equity &amp; Inclusion" aria-label="Diversity, Equity &amp; Inclusion" name="nav_footer_company : Diversity, Equity &amp; Inclusion">                    Diversity, Equity &amp; Inclusion                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/company/esg.html" title="Environment, Social &amp; Governance" aria-label="Environment, Social &amp; Governance" name="nav_footer_company : Environment, Social &amp; Governance">                    Environment, Social &amp; Governance                </a>                        </div></div></div>    </div>                  </div></div>    </div></div>                     </div>                     <div class="col-md-6 col-lg-3 mt-3 cont-columns  ">                        <div><div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">        <div class="linksContainer aem-GridColumn aem-GridColumn--default--12">    <div class="submenu-container">   <div class="submenu-container-title header-margin"></div>          <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">        <div class="links aem-GridColumn aem-GridColumn--default--12">    <div class="mb-40 ">    <div class="submenu-links-footer">
+                                                                        
+                                                             <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://careers.vmware.com/" title="Careers" aria-label="Careers" name="nav_footer_company : Careers">                    Careers                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://blogs.vmware.com/" title="Blogs" aria-label="Blogs" name="nav_footer_company : Blogs">                    Blogs                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://communities.vmware.com/" title="Communities" aria-label="Communities" name="nav_footer_company : Communities">                    Communities                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/company/acquisitions.html" title="Acquisitions" aria-label="Acquisitions" name="nav_footer_company : Acquisitions">                    Acquisitions                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/company/office_locations.html" title="Office Locations" aria-label="Office Locations" name="nav_footer_company : Office Locations">                    Office Locations                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://cloud.vmware.com/trust-center" title="VMware Cloud Trust Center" aria-label="VMware Cloud Trust Center" name="nav_footer_company : VMware Cloud Trust Center">                    VMware Cloud Trust Center                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://news.vmware.com/vmware-global-response-to-covid-19" title="COVID-19 Resources" aria-label="COVID-19 Resources" name="nav_footer_company : COVID-19 Resources">                    COVID-19 Resources                </a>                        </div></div></div>    </div>                  </div></div>    </div></div>                     </div>                     <div class="col-md-6 col-lg-3 mt-3 cont-columns  ">                        <div><div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">        <div class="linksContainer aem-GridColumn aem-GridColumn--default--12">    <div class="submenu-container">      <p class="mb-20 text-black text-s">                                           Support                   </p>          <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">        <div class="links aem-GridColumn aem-GridColumn--default--12">    <div class="mb-40 ">    <div class="submenu-links-footer">
+                                                                        
+                                                            <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://www.vmware.com/go/customerconnect" title="VMware Customer Connect" aria-label="VMware Customer Connect" name="nav_footer_support : VMware Customer Connect">                    VMware Customer Connect                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/support/policies.html" title="Support Policies" aria-label="Support Policies" name="nav_footer_support : Support Policies">                    Support Policies                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://docs.vmware.com/" title="Product Documentation" aria-label="Product Documentation" name="nav_footer_support : Product Documentation">                    Product Documentation                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/resources/compatibility/search.php" title="Compatibility Guide" aria-label="Compatibility Guide" name="nav_footer_support : Compatibility Guide">                    Compatibility Guide                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/download/eula.html" title="End User Terms &amp; Conditions" aria-label="End User Terms &amp; Conditions" name="nav_footer_support : End User Terms &amp; Conditions">                    End User Terms &amp; Conditions                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/company/vmw-modern-slavery-california-statement-2021.pdf" title="California Transparency Act Statement" aria-label="California Transparency Act Statement" name="nav_footer_support : California Transparency Act Statement" asset-type="application/pdf" asset-id="d0cadf21-4f73-49a5-a0fe-9cc186c13ede" asset-score="1">                    California Transparency Act Statement                </a>                        </div></div></div>    </div>                  </div></div>    </div></div>                     </div>                     <div class="col-md-6 col-lg-3 mt-3 cont-columns ">                        <div><div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">        <div class="linksContainer aem-GridColumn aem-GridColumn--default--12">    <div class="submenu-container">   <div class="submenu-container-title header-margin"></div>          <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">        <div class="links aem-GridColumn aem-GridColumn--default--12">    <div class="mb-40 ">    <div class="submenu-links-footer">
+                                                                        
+                                                            <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://twitter.com/VMware" title="Twitter" aria-label="Twitter" name="nav_footer_social : Twitter">                    <i class="fa fa-twitter text-indigo pr-4" aria-hidden="true"></i>Twitter                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://www.youtube.com/user/vmwaretv" title="YouTube" aria-label="YouTube" name="nav_footer_social : YouTube">                    <i class="fa fa-youtube text-indigo pr-4" aria-hidden="true"></i>YouTube                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://www.facebook.com/vmware" title="Facebook" aria-label="Facebook" name="nav_footer_social : Facebook">                    <i class="fa fa-facebook text-indigo pr-4" aria-hidden="true"></i>Facebook                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" target="_blank" href="https://www.linkedin.com/company/vmware/mycompany/" title="LinkedIn" aria-label="LinkedIn" name="nav_footer_social : LinkedIn">                    <i class="fa fa-linkedin text-indigo pr-4" aria-hidden="true"></i>LinkedIn                </a>                                                <a class="text-xxss text-black mb-20 d-lg-flex d-block" href="https://www.vmware.com/company/contact_sales.html" title="Contact Sales" aria-label="Contact Sales" name="nav_footer_company : Contact Sales">                    <i class="fa fa-envelope text-indigo pr-4" aria-hidden="true"></i>Contact Sales                </a>                        </div></div></div>    </div>                  </div></div>    </div></div>                     </div>                                                   </div>            </div>         </div>      </section>   </div></div></div>    </div>                     </div>                   </div>                       <div class="row">                     <div class="col-lg-12 col-md-12 footer-links-wrapper">                        <hr class="br-black mb-20">                        <div class="footer-links mt-3">                           <span class="mb-3">© 2022 VMware, Inc.</span>      <a href="https://www.vmware.com/help/legal.html" class="text-xxss text-black mb-3 ml-lg-3" aria-label="Terms of Use" title="Terms of Use" name="nav_footer_bottom : Terms of Use">Terms of Use</a>       <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html" class="text-xxss text-black mb-3 ml-lg-3" aria-label="Your California Privacy Rights" title="Your California Privacy Rights" name="nav_footer_bottom : Your California Privacy Rights">Your California Privacy Rights</a>       <a href="https://www.vmware.com/help/privacy.html" class="text-xxss text-black mb-3 ml-lg-3" aria-label="Privacy" title="Privacy" name="nav_footer_bottom : Privacy">Privacy</a>       <a href="https://www.vmware.com/help/accessibility.html" class="text-xxss text-black mb-3 ml-lg-3" aria-label="Accessibility" title="Accessibility" name="nav_footer_bottom : Accessibility">Accessibility</a>       <a href="https://www.vmware.com/site_index.html" class="text-xxss text-black mb-3 ml-lg-3" aria-label="Site Map" title="Site Map" name="nav_footer_bottom : Site Map">Site Map</a>       <a href="https://www.vmware.com/help/trademarks.html" class="text-xxss text-black mb-3 ml-lg-3" aria-label="Trademarks" title="Trademarks" name="nav_footer_bottom : Trademarks">Trademarks</a>       <a href="https://www.vmware.com/topics/glossary" class="text-xxss text-black mb-3 ml-lg-3" aria-label="Glossary" title="Glossary" name="nav_footer_bottom : Glossary">Glossary</a>       <a href="https://www.vmware.com/help.html" class="text-xxss text-black mb-3 ml-lg-3" aria-label="Help" title="Help" name="nav_footer_bottom : Help">Help</a>       <span id="NewSiteFeedback" class="SiteFeedback"><a class="footer-feeback" href="javascript:void(0);" title="Feedback">Feedback</a></span>                        </div>                     </div>                  </div>                 </footer>            </div>         </div>      </div>   </div></section></div>
+</footer>
+        <!-- Custom Twitter Feeds JS -->
+        <script type="text/javascript">
+            window.ctf_custom_js = function($){water}
+        </script>
+        <script type="text/javascript" id="email-subscribers-js-extra">
+/* <![CDATA[ */
+var es_data = {"messages":{"es_empty_email_notice":"Please enter email address","es_rate_limit_notice":"You need to wait for sometime before subscribing again","es_single_optin_success_message":"Successfully Subscribed.","es_email_exists_notice":"Email Address already exists!","es_unexpected_error_notice":"Oops.. Unexpected error occurred.","es_invalid_email_notice":"Invalid email address","es_try_later_notice":"Please try after some time"},"es_ajax_url":"https:\/\/octo.vmware.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Why%20Virtualize%20HPC_files/email-subscribers-public.js" id="email-subscribers-js"></script>
+<script type="text/javascript" src="Why%20Virtualize%20HPC_files/comment-reply.js" id="comment-reply-js"></script>
+<script type="text/javascript" src="Why%20Virtualize%20HPC_files/main-7219799b5f.js" id="sage/js-js"></script>
+<script async="async" type="text/javascript" src="Why%20Virtualize%20HPC_files/form.js" id="akismet-form-js"></script>
+<button style="display:none;" id="ot-sdk-btn" class="ot-sdk-show-settings">
+Cookie Settings</button>
+    <script src="Why%20Virtualize%20HPC_files/scrapercontent.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="Why%20Virtualize%20HPC_files/responsive.js" type="text/javascript" charset="UTF-8"></script>
+  <noscript><img src="https://octo.vmware.com/akam/13/pixel_1af40cd6?a=dD05ZGRhYzJmZjYwYThjZjNkNDI4OTZkZDljYjM1Njk4ZGVkODBmZDdmJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript" src="Why%20Virtualize%20HPC_files/tPIwgB.js"></script>
+</body></html>

@@ -58,6 +58,9 @@ It is an alias for the variable. You can &pointer to get the address of the poin
 
 - Still not sure what the point of references are, except for making temp variables to pass into functions, lists, without making pointers for the original variables and dereferencing them.
 
+- The point is that a reference gives you a reference to something without
+a pointer. So you change the actual variable, index in array etc, but without pointer logistics, i.e. can treat the passed variable as a normal variable, but know that it is changing or pulling data from an actual existing thing, not a new thing.
+
 ## Pointers to Pointers / 2 dimensional arrays
 
 ```

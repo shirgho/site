@@ -19,7 +19,9 @@ Not to say that he wasn't affected by all these worldly things. He liked them, b
 
 Yet, he just loved everyone. He cried for hours when he heard his friend had passed away. 
 
-Shame on me for not taking his best qualities and living them out. Shame on me for not following some simple words of advice. "Be happy all time now." Is what he used to say. It's simple, really. Well, maybe not happy all the time, but at least he was as he was all the time. And I think I am tending more towards this now. I am happier.
+Shame on me for not taking his best qualities and living them out. Shame on me for not following some simple words of advice. "Be happy all time now." Is what he used to say. It's simple, really. Well, he definitely was not happy all the time, but at least he was as he was all the time. And I think I am tending more towards this now. I am happier.
+
+<p><img align = "center" src="../images/UncleMeAleenaLahore.jpg" alt="UncleAleenaMeLahore" title="Uncle with me and Aleena, in Lahore. Ignore the artificats, was an old photo, which I 'digitalised' with my phone camera." width = "100%" height = "100%" /></p>
 
 I miss him. I think my family misses him, my sister. Even though he was a pain in the ass a lot of times, a lot of times, especially his dramas and my mother having to deal with them. But he kept us all together. And his last, actual period of sickness was not nice for anyone, especially for my family. Well, he did like parts of that even. I think he believed he was Nana in those last parts of his life, haha. He said things like I'm giving all my wealth etc. to you. I was like thanks, you have like 10 rupees on you, but thanks.
 
@@ -32,6 +34,12 @@ Most of the love I see in the world is selfish. It has something to do with owne
 ps. please do a bit better and show others a piece of the good life as well. How long do you want all this suffering in the world to continue, you confusing God? If I had to make an employee performance review, you would not score well. But you're the boss, not an employee.
 ...
 Yeah, yeah, I know, part of the bigger picture, world is a manifestation of our consciousness, probably all the floods and wars are actually my/everyone's fault, everything happens as it happens to go wherever it is supposed to go, fine, fine. Still. We need someone to blame, and I can either continue blaming everyone and myself or I can blame you.
+
+... postscript 19.10.22
+
+I don't/can't actually blame God. I am blaming that out which all things come from. Can only accept it, perhaps, not try to understand it, and see if it goes to somewhere better.
+
+For all you clever athiests as well as for all you religious nutjobs, can take God to mean whatever it means or doesn't mean to you right now.
 
 
 

@@ -10,6 +10,31 @@ Short stories, articles, musings, and excerpts from longer work(s)
 
 </div>
 
+
+<section id="Problem">
+    
+<pre> <h4> The Problem with Us.
+26-10-2022 </h4> </pre>
+
+A bit of an over-sprawling article, which can probably be divided into two separate topics.
+    
+But for now, can read it <a href="theProblemWithUs.html">here.</a></p>
+
+</section>
+
+<section id="Uncle">
+    
+<pre> <h4> Adding link to Article on Uncle.
+19-10-2022 </h4> </pre>
+
+Had written it some time before, but did not know if it would be okay to publish it online.
+But khair hai, I think. 
+    
+Can read it <a href="uncle.html">here.</a></p>
+
+</section>
+
+
 <section id="TheHeightofInhospitability">
 
 <pre> <h4> The Height of Inhospitability
